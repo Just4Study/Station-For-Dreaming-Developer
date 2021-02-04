@@ -1,5 +1,7 @@
 ## Backend 실행 방법
 
+Python3 Version : 3.8.5
+
 ~~~
 git clone을 한 후 backend 디렉토리에 있다고 가정
 
