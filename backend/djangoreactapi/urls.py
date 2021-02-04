@@ -20,5 +20,6 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('mentor/', include('mentor.urls'))
+    path('mentor/', include('mentor.urls')),
+    path('post/', include('post.urls'))
 ] + static(settings.IMG_URL, document_root=settings.IMG_ROOT)
