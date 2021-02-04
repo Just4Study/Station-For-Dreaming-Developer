@@ -13,12 +13,14 @@ const App = () => {
     isLoggined: authStore.isLoggined.get(),
   }))
 
+  /*
   const history = useHistory()
   useEffect(() => {
     if(!isLoggined) {
       history.push('/signin')
     }
   }, [])
+  */
 
   const styles = mainPageStyle
 

@@ -14,7 +14,7 @@ const App = (props) => {
     if(pathName.indexOf('/signin') !== -1 || pathName.indexOf('/signup') !== -1) {
       setVisible(false);
     } else {
-      setVisible(false);
+      setVisible(true);
     }
   }, [])
 
@@ -30,24 +30,34 @@ const App = (props) => {
     <div>
     { visible && 
       <div className={styles.container}>
-        <div
-          className={styles.headerContainer}
-        >
-          <img
-            src={logo}
-            alt='logo'
-            className={styles.logoContainer}
-            //onClick
-          />
-          <div
-            className={styles.menuContainer}
-          >
-            aaaaa
+        <div className={styles.headerContainer}>
+          <div className={styles.leftMenuContainer}>
+            <div
+              className={styles.left1}
+            >
+              팀원 모집
+            </div>
+            <div
+              className={styles.left2}
+            >
+              전문가 인터뷰
+            </div>
           </div>
-          <div
-            className={styles.menuContainer}
-          >
-            bbbbb
+          <div>
+            <img
+              src={logo}
+              alt='logo'
+              className={styles.logoContainer}
+              //onClick
+            />
+          </div>
+          <div className={styles.rightMenuContainer}>
+            <div className={styles.right2}>
+              쪽지
+            </div>
+            <div className={styles.right1}>
+              홍길동
+            </div>
           </div>
         </div>
       </div>

@@ -1,16 +1,69 @@
 .container {
   width: 100%;
-  height: 100px;
-  background-color: black;
-  color: white;
+  height: 104px;
+  background-color: #030222;
+  color: #c2e9fb;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .logoContainer {
-  width: 100px;
-  height: 100px;
+  display: block;
+  width: 65.1px;
+  height: 70px;
+  padding: auto;
+  padding-top: 17px;
 }
 
-.menuContainer {
-  float: right;
-  color: white;
+.leftMenuContainer {
+  display: flex;
+  width: 39%;
+  padding-top: 46px;
+}
+
+.left1 {
+  width: 120px;
+  height: 13px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: Arita-dotum-_OTF;
+  text-align: center;
+}
+
+.left2 {
+  width: 120px;
+  height: 13px;
+  padding-right: 40%;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: Arita-dotum-_OTF;
+  text-align: center;
+}
+
+.rightMenuContainer {
+  display: flex;
+  padding-top: 46px;
+}
+
+.right1 {
+  width: 120px;
+  height: 13px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: Arita-dotum-_OTF;
+  text-align: center;
+}
+
+.right2 {
+  width: 120px;
+  height: 13px;
+  padding-left: 440px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: Arita-dotum-_OTF;
+  text-align: center;
 }
