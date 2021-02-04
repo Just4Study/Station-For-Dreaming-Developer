@@ -7,6 +7,7 @@ import MainPage from './pages/MainPage'
 import Header from './layouts/Header'
 
 const App = () => {
+
   return (
     <BrowserRouter>
       <Route path='/' component={Header}/>

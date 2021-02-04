@@ -1,10 +1,27 @@
 import React, { useState, useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
+
+import useRootData from '../../stores/useRootData'
 
 import mainPageStyle from './mainPage.module.css'
 
 
 const App = () => {
+  const { 
+    isLoggined, 
+  } = useRootData(({ authStore }) => ({
+    isLoggined: authStore.isLoggined.get(),
+  }))
+
+  const history = useHistory()
+  useEffect(() => {
+    if(!isLoggined) {
+      history.push('/signin')
+    }
+  }, [])
+
   const styles = mainPageStyle
+
   const [cards, setCards] = useState([])
 
   const category_list = ['앱', '웹', 'AI']
