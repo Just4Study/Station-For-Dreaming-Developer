@@ -1,5 +1,5 @@
 import appStore from './app'
-import authStore from './app'
+import authStore from './auth'
 
 const createRootStore = () => {
   return {

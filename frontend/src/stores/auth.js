@@ -2,10 +2,18 @@ import { observable } from 'mobx'
 
 const createStore = () => {
   const authStore = {
-    test: observable.box(null),
+    isLoggined: observable.box(false),
+    name: observable.box(null),
+    email: observable.box(null),
 
-    chageTest(data) {
-      appStore.test.set(data)
+    changeIsLoggined(data) {
+      authStore.isLoggined.set(data)
+    },
+    changeName(data) {
+      authStore.name.set(data)
+    },
+    changeEmail(data) {
+      authStore.email.set(data)
     }
   }
 
