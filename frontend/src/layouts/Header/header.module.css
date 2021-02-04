@@ -13,7 +13,7 @@
 
 .logoContainer {
   display: block;
-  width: 65.1px;
+  width: 65px;
   height: 70px;
   padding: auto;
   padding-top: 17px;
@@ -21,8 +21,8 @@
 
 .leftMenuContainer {
   display: flex;
-  width: 39%;
   padding-top: 46px;
+  padding-right: 12%;
 }
 
 .left1 {
@@ -37,7 +37,6 @@
 .left2 {
   width: 120px;
   height: 13px;
-  padding-right: 40%;
   font-size: 13px;
   font-weight: 500;
   font-family: Arita-dotum-_OTF;
@@ -47,6 +46,7 @@
 .rightMenuContainer {
   display: flex;
   padding-top: 46px;
+  padding-left: 12%;
 }
 
 .right1 {
@@ -61,7 +61,6 @@
 .right2 {
   width: 120px;
   height: 13px;
-  padding-left: 440px;
   font-size: 13px;
   font-weight: 500;
   font-family: Arita-dotum-_OTF;

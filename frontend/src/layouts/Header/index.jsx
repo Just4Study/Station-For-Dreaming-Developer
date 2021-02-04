@@ -5,8 +5,20 @@ import logo from '../../imgs/logo.png'
 
 import { withRouter } from 'react-router-dom';
 
+function useWindowSize() {
+  const [size, setSize] = useState(window.innerWidth)
+  useEffect(() => {
+    const handleResize = () => {
+      setSize(window.innerWidth)
+    }
+    window.addEventListener('resize', handleResize)
+  }, [])
+  return size
+}
+
 const App = (props) => {
   const styles = headerStyle
+  const height = useWindowSize
   const [visible, setVisible] = useState(true)
 
   useEffect(() => {
@@ -32,14 +44,10 @@ const App = (props) => {
       <div className={styles.container}>
         <div className={styles.headerContainer}>
           <div className={styles.leftMenuContainer}>
-            <div
-              className={styles.left1}
-            >
+            <div className={styles.left1}>
               팀원 모집
             </div>
-            <div
-              className={styles.left2}
-            >
+            <div className={styles.left2}>
               전문가 인터뷰
             </div>
           </div>
