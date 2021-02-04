@@ -1,0 +1,84 @@
+.container {
+  width: 100%;
+  height: 100%;
+  background-image: url('../../imgs/signUpBackground.png');
+}
+
+.logoContainer {
+  width: 108px;
+  height: 113.3px;
+  margin-left: 149px;
+  margin-bottom: 39.1px;
+}
+
+.signUpContainer {
+  width: 406px;
+  margin: auto;
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+.inputBox {
+  width: 366px;
+  height: 47.9px;
+  margin-bottom: 27px;
+  border-radius: 24px;
+  border: solid 3px #c2e9fb;
+  font-size: 14px;
+  color: #c2e9fb;
+  padding: 0;
+  padding-left: 34px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.emailContainer {
+  width: 406px;
+}
+
+.emailBox {
+  width: 220.5px;
+  height: 47.9px;
+  margin: 0;
+  margin-bottom: 27px;
+  border-radius: 24px;
+  border: solid 3px #c2e9fb;
+  font-size: 14px;
+  color: #c2e9fb;
+  padding: 0;
+  padding-left: 34px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.inputBox::placeholder,
+.emailBox::placeholder {
+  color: #c2e9fb;
+}
+
+.emailRequestBtn {
+  width: 128px;
+  height: 53.9px;
+  padding: 0;
+  margin: 0;
+  margin-left: 17.5px;
+  background-color: #c2e9fb;
+  color: #030222;
+  border-radius: 24px;
+  border: solid 3px #c2e9fb;
+  font-size: 14px;
+}
+
+.signUpBtnContainer {
+  width: 406px;
+}
+
+.signUpBtn {
+  width: 116.8px;
+  height: 26.9px;
+  margin: 0, 0, 0, 114.6;
+  margin-left: 144.6px;
+  background-color: #c2e9fb;
+  border-radius: 24px;
+  border: solid 3px #c2e9fb;
+  color: #030222;
+  font-size: 9px;
+}
