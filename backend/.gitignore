@@ -2,8 +2,10 @@ venv
 db.sqlite3
 *.pyc
 __pycache__/
+migrations/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
 db.db
 media
+Profile_Image/
