@@ -1,4 +1,9 @@
 venv
 db.sqlite3
-post/__pycache__
-account/__pycache__
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+db.db
+media
