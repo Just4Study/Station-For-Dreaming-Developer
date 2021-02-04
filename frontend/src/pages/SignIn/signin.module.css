@@ -1,0 +1,71 @@
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../../imgs/signInBackground.png');
+}
+
+.logoContainer {
+  width: 137.2px;
+  height: 147.5px;
+  margin: 0px 166.7px 40.5px 122px;
+  object-fit: contain;
+}
+
+.signInContainer {
+  width: 406px;
+  margin: auto;
+  padding-top: 354px;
+  padding-bottom: 80px;
+}
+
+.inputBox {
+  width: 366px;
+  height: 47.9px;
+  margin-bottom: 27px;
+  border-radius: 24px;
+  border: solid 3px #c2e9fb;
+  font-size: 14px;
+  color: #c2e9fb;
+  padding: 0;
+  padding-left: 34px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.emailContainer {
+  width: 406px;
+}
+
+.emailBox {
+  width: 220.5px;
+  height: 47.9px;
+  margin: 0;
+  margin-bottom: 27px;
+  border-radius: 24px;
+  border: solid 3px #c2e9fb;
+  font-size: 14px;
+  color: #c2e9fb;
+  padding: 0;
+  padding-left: 34px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.inputBox::placeholder,
+.emailBox::placeholder {
+  color: #c2e9fb;
+}
+
+.signUpBtnContainer {
+  width: 406px;
+}
+
+.signUpBtn {
+  width: 116.8px;
+  height: 26.9px;
+  margin: 0, 0, 0, 114.6;
+  margin-left: 144.6px;
+  background-color: rgba( 255, 255, 255, 0 );
+  border-color:  rgba( 255, 255, 255, 0 );
+  color: #c2e9fb;
+  font-size: 16px;
+}
