@@ -1,3 +1,5 @@
+import useRootData from '../../stores/useRootData.js'
+
 import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
@@ -5,35 +7,70 @@ import loginstyle from './login.module.css'
 import logo from '../../imgs/logo.png'
 import axios from 'axios'
 
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
 const App = () => {
+  const history = useHistory()
   const styles = loginstyle
+  const [isSubmit, setSubmit] = useState(false);
   const [infos, setInfos] = useState({
     email: '',
     password: '',
   })
-  const [isLogin, setLogin] = useState(false);
-  const history = useHistory();
-
-  axios.post(
-    'http://127.0.0.1:8000/user/login',
-    {
-    user_name: 'name',
-    email: 'email@gmail.com',
-    password: '123'
-  }, {})
-  .then(function (response) {
-    console.log(response);
-    // history.push('/');
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
-    
 
   const onChangeHandler = (e) => {
     const { name, value } = e.target;
     setInfos(infos => ({ ...infos, [name]: value }));
   }
+
+   async function buttonHandler() {
+    console.log('버튼클릭');
+    setSubmit(true);
+    await sleep(1000);
+    setSubmit(false);
+  }
+
+
+  const { isLoggined, name, email, changeIsLoggined, changeName, changeEmail } = useRootData(({ authStore }) => ({
+    isLoggined: authStore.isLoggined.get(),
+    name: authStore.name.get(),
+    email: authStore.email.get(),
+    changeIsLoggined: authStore.changeIsLoggined,
+    changeName: authStore.changeName,
+    changeEmail: authStore.changeEmail,
+  }))
+
+
+
+
+  useEffect((isSubmit) => {
+    axios.post(
+      'http://localhost:8000/user/login',
+      {
+        user_name: '',
+        email: infos.email,
+        password: infos.password,
+      },
+      {},
+    ).then((response) => {
+      if (response) {
+        changeIsLoggined(true);
+        changeName(response.name);
+        changeEmail(response.email);
+        console.log('로그인됨');
+        history.push('/')
+      } else {
+        alert('이메일 혹은 비밀번호가 틀렸습니다.');
+      }
+    }).catch((error) => {
+      console.log(error);
+      console.log('이메일 혹은 비밀번호가 틀렸습니다.');
+    });
+  }, [isSubmit])
 
   return (
     <div className={styles.container}>
@@ -60,11 +97,13 @@ const App = () => {
         <div className={styles.logInBtnContainer}>
           <button
             className={styles.logInBtn}
+            onClick={() => buttonHandler()}
           >
             LOG IN
           </button>
           <button
             className={styles.signUpButton}
+            onClick={() => history.push('/signup')}
           >
             SIGN UP
           </button>
