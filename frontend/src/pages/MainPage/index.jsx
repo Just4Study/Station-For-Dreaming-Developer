@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import axios from 'axios'
@@ -74,7 +73,7 @@ const App = () => {
   useEffect(() => {
     let url = 'http://localhost:8000/post?';
     if(currType !== '' && currCategory !== '') {
-      onChangeHandler(url + 'team_type=' + currType + '&' + 'dev_category=' + currCategory)
+      onChangeHandler(url + 'team_type=' + currType + '&dev_category=' + currCategory)
     } else if(currType === '' && currCategory !== '') {
       onChangeHandler(url + 'dev_category=' + currCategory)
     } else if(currType !== '' && currCategory === '') {
