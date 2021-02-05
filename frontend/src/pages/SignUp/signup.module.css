@@ -82,3 +82,11 @@
   color: #030222;
   font-size: 9px;
 }
+
+input:focus {
+  outline:none;
+}
+
+button:focus {
+  outline:none;
+}

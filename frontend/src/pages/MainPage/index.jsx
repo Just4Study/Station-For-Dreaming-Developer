@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+// eslint-disable-next-line
 import { useHistory } from 'react-router-dom'
 
 import useRootData from '../../stores/useRootData'
@@ -8,6 +9,7 @@ import mainPageStyle from './mainPage.module.css'
 
 const App = () => {
   const { 
+    // eslint-disable-next-line
     isLoggined, 
   } = useRootData(({ authStore }) => ({
     isLoggined: authStore.isLoggined.get(),

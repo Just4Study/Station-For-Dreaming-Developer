@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 
-import signinstyle from './signin.module.css'
+import loginstyle from './login.module.css'
 import logo from '../../imgs/logo.png'
 
-
 const App = () => {
-  const styles = signinstyle
+  const styles = loginstyle
   const [infos, setInfos] = useState({
     email: '',
     password: '',
@@ -13,12 +12,12 @@ const App = () => {
 
   const onChangeHandler = (e) => {
     const { name, value } = e.target;
-    setInfos(infos => ({...infos, [name]: value}));
+    setInfos(infos => ({ ...infos, [name]: value }));
   }
 
   return (
     <div className={styles.container}>
-      <div className={styles.signInContainer}>
+      <div className={styles.logInContainer}>
         <img
           src={logo}
           alt='logo'
@@ -38,11 +37,16 @@ const App = () => {
           value={infos['password']}
           onChange={(e) => onChangeHandler(e)}
         />
-        <div className={styles.signUpBtnContainer}>
+        <div className={styles.logInBtnContainer}>
           <button
-            className={styles.signUpBtn}
+            className={styles.logInBtn}
           >
-            SIGN IN
+            LOG IN
+          </button>
+          <button
+            className={styles.signUpButton}
+          >
+            SIGN UP
           </button>
         </div>
       </div>

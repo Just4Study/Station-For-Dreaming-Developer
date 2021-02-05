@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 import headerStyle from './header.module.css'
 import logo from '../../imgs/logo.png'
-
+// eslint-disable-next-line
 import { withRouter } from 'react-router-dom';
 
 function useWindowSize() {
@@ -18,12 +18,13 @@ function useWindowSize() {
 
 const App = (props) => {
   const styles = headerStyle
+  // eslint-disable-next-line
   const height = useWindowSize
   const [visible, setVisible] = useState(true)
 
   useEffect(() => {
     const pathName = window.location.pathname
-    if(pathName.indexOf('/signin') !== -1 || pathName.indexOf('/signup') !== -1) {
+    if(pathName.indexOf('/login') !== -1 || pathName.indexOf('/signup') !== -1) {
       setVisible(false);
     } else {
       setVisible(true);
@@ -31,7 +32,7 @@ const App = (props) => {
   }, [])
 
   props.history.listen((location) => {
-    if(location['pathname'].indexOf('/signin') !== -1 || location['pathname'].indexOf('/signup') !== -1) {
+    if(location['pathname'].indexOf('/login') !== -1 || location['pathname'].indexOf('/signup') !== -1) {
       setVisible(false);
     } else {
       setVisible(true);
