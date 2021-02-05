@@ -1,6 +1,6 @@
 // import React, { useState } from 'react'
 
-import style from './writepage.module.css'
+import style from './writingpage.module.css'
 
 const App = () => {
     const styles = style;
