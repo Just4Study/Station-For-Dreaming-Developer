@@ -41,7 +41,7 @@ const App = () => {
                     <div className={style.textarealabel}>
                         우대 사항
                     </div>
-                    <textarea className={style.eligibilityarea}
+                    <textarea className={style.preferentialerea}
                         id="introduction"
                         name="introduction">
                     </textarea>
