@@ -22,7 +22,7 @@
 .leftMenuContainer {
   display: flex;
   padding-top: 46px;
-  padding-right: 12%;
+  padding-right: 18%;
 }
 
 .left1 {
@@ -46,7 +46,7 @@
 .rightMenuContainer {
   display: flex;
   padding-top: 46px;
-  padding-left: 12%;
+  padding-left: 18%;
 }
 
 .right1 {

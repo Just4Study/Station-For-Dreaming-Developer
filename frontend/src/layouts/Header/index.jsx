@@ -3,22 +3,9 @@ import React, { useState, useEffect } from 'react'
 import headerStyle from './header.module.css'
 import logo from '../../imgs/logo.png'
 
-import { withRouter } from 'react-router-dom';
-
-function useWindowSize() {
-  const [size, setSize] = useState(window.innerWidth)
-  useEffect(() => {
-    const handleResize = () => {
-      setSize(window.innerWidth)
-    }
-    window.addEventListener('resize', handleResize)
-  }, [])
-  return size
-}
 
 const App = (props) => {
   const styles = headerStyle
-  const height = useWindowSize
   const [visible, setVisible] = useState(true)
 
   useEffect(() => {
