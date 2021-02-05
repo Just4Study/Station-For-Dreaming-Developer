@@ -23,7 +23,7 @@ const App = () => {
   }, {})
   .then(function (response) {
     console.log(response);
-    history.push('/');
+    // history.push('/');
   })
   .catch(function (error) {
     console.log(error);

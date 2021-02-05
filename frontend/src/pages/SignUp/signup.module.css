@@ -14,13 +14,14 @@
 .signUpContainer {
   width: 406px;
   margin: auto;
-  padding-top: 120px;
+  padding-top: 5%;
 }
 
 .inputBox {
   width: 366px;
   height: 47.9px;
   margin-bottom: 27px;
+  margin-left: 20px;
   border-radius: 24px;
   border: solid 3px #c2e9fb;
   font-size: 14px;
@@ -32,6 +33,7 @@
 
 .emailContainer {
   width: 406px;
+  margin-left: 20px;
 }
 
 .emailBox {
