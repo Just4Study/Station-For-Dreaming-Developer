@@ -4,8 +4,15 @@ import { useHistory } from 'react-router-dom'
 import headerStyle from './header.module.css'
 import logo from '../../imgs/logo.png'
 
+import useRootData from '../../stores/useRootData'
+
 const App = (props) => {
   const styles = headerStyle
+
+  const { name } = useRootData(({ authStore }) => ({
+    name: authStore.name.get()
+  }))
+
   const [visible, setVisible] = useState(true)
 
   useEffect(() => {
@@ -77,7 +84,7 @@ const App = (props) => {
               </span>
             </div>
             <div className={styles.right1}>
-              홍길동
+              {name}
             </div>
           </div>
         </div>
