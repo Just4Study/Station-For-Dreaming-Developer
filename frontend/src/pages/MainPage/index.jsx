@@ -22,7 +22,7 @@ const App = () => {
 
   const history = useHistory()
   const toWrite = () => {
-    history.push('/WritingPage')
+    history.push('/writingpage')
   }
   const toTeamPage = (url) => {
     console.log(url)
