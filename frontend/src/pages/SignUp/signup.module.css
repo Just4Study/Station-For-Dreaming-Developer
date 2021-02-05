@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-image: url('../../imgs/signUpBackground.png');
 }
 
@@ -15,7 +15,6 @@
   width: 406px;
   margin: auto;
   padding-top: 120px;
-  padding-bottom: 80px;
 }
 
 .inputBox {
