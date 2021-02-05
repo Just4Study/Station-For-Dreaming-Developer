@@ -144,6 +144,7 @@ hr {
     box-sizing: border-box;
     width: 747px;
     height: 166px;
+    margin-top: 8px;
     resize: none;
 
     font-family: 'arita-dotum4.0otfmedium';
@@ -161,6 +162,7 @@ hr {
     box-sizing: border-box;
     width: 747px;
     height: 90px;
+    margin-top: 8px;
     resize: none;
 
     font-family: 'arita-dotum4.0otfmedium';
@@ -177,6 +179,7 @@ hr {
     box-sizing: border-box;
     width: 747px;
     height: 90px;
+    margin-top: 8px;
     resize: none;
 
     font-family: 'arita-dotum4.0otfmedium';
