@@ -22,12 +22,13 @@
 .leftMenuContainer {
   display: flex;
   padding-top: 46px;
-  padding-right: 18%;
+  padding-right: 465px;
 }
 
 .left1 {
   width: 120px;
   height: 13px;
+  padding-left: 15px;
   font-size: 13px;
   font-weight: 500;
   font-family: Arita-dotum-_OTF;
@@ -37,6 +38,7 @@
 .left2 {
   width: 120px;
   height: 13px;
+
   font-size: 13px;
   font-weight: 500;
   font-family: Arita-dotum-_OTF;
@@ -46,7 +48,7 @@
 .rightMenuContainer {
   display: flex;
   padding-top: 46px;
-  padding-left: 18%;
+  padding-left: 475px;
 }
 
 .right1 {

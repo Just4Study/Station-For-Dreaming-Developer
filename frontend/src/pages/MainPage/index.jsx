@@ -1,8 +1,8 @@
 
 import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 
-// eslint-disable-next-line
-import { useHistory } from 'react-router-dom'
+// import { useHistory } from 'react-router-dom'
 
 // import useRootData from '../../stores/useRootData'
 import filter from '../../imgs/filter.png'
@@ -12,20 +12,28 @@ import mainPageStyle from './mainPage.module.css'
 
 
 const App = () => {
-  /*
-  const history = useHistory()
+  //const history = useHistory()
+  //useEffect(() => {
+  //  if(!isLoggined) {
+  //    history.push('/signin')
+  //  }
+  //}, [])
+
   useEffect(() => {
-    if(!isLoggined) {
-      history.push('/signin')
-    }
+    axios.get('http://localhost:8000/post/')
+      .then(response => {
+        console.log(response)
+      })
+      .catch(error=> {
+        console.log(error);
+      })
   }, [])
-  */
 
   const styles = mainPageStyle
 
   const [cards, setCards] = useState([])
 
-  const category_list = ['앱', '웹', 'AI']
+  const category_list = ['Web', 'App', 'AI']
   const categories = category_list.map((option) => {
     return <option value={option} key={option}>{option}</option>
   })
@@ -51,67 +59,67 @@ const App = () => {
         title: 'title1',
         author: 'author1',
         team_type: 'team_type1',
-        dev_categories: ['웹', '앱'],
+        dev_categories: 'Web',
       },
       {
         title: 'title2',
         author: 'author2',
         team_type: 'team_type2',
-        dev_categories: ['웹', '앱'],
+        dev_categories: 'Web',
       },
       {
         title: 'title2',
         author: 'author2',
         team_type: 'team_type2',
-        dev_categories: ['웹', '앱'],
+        dev_categories: 'Web',
       },
       {
         title: 'title2',
         author: 'author2',
         team_type: 'team_type2',
-        dev_categories: ['웹', '앱'],
+        dev_categories: 'Web',
       },
       {
         title: 'title2',
         author: 'author2',
         team_type: 'team_type2',
-        dev_categories: ['웹', '앱'],
+        dev_categories: 'Web',
       },
       {
         title: 'title2',
         author: 'author2',
         team_type: 'team_type2',
-        dev_categories: ['웹', '앱'],
+        dev_categories: 'Web',
       },
       {
         title: 'title2',
         author: 'author2',
         team_type: 'team_type2',
-        dev_categories: ['웹', '앱'],
+        dev_categories: 'Web',
       },
       {
         title: 'title2',
         author: 'author2',
         team_type: 'team_type2',
-        dev_categories: ['웹', '앱'],
+        dev_categories: 'Web',
       },
       {
         title: 'title2',
         author: 'author2',
         team_type: 'team_type2',
-        dev_categories: ['웹', '앱'],
+        dev_categories: 'Web',
       },
       {
         title: 'title2',
         author: 'author2',
         team_type: 'team_type2',
-        dev_categories: ['웹', '앱'],
+        dev_categories: 'Web',
       },
       {
         title: 'title2',
         author: 'author2',
         team_type: 'team_type2',
-        dev_categories: ['웹', '앱'],
+        dev_categories: 'Web',
       },
     ]
     setCards(cards)
@@ -125,7 +133,6 @@ const App = () => {
               src={filter}
               alt='filter'
               className={styles.filterImg}
-              //onClick
           />
         </div>
         <div className={styles.filterContainer}>
@@ -161,21 +168,15 @@ const App = () => {
             <div className={styles.cardContainer}>
               <div className={styles.cardTeamType}>
                 {card['team_type']}
-              </div>
+              </div>  
               <div className={styles.cardTitle}>
                 {card['title']}
               </div>
               <div className={styles.cardAuthor}>
                 {card['author']}
               </div>
-              <div className={styles.cardCategories}>
-                {card['dev_categories'].map((category) => {
-                  return (
-                    <span className={styles.cardCategoryBox}>
-                      {category}
-                    </span>
-                  )
-                })}
+              <div className={styles.cardCategoryBox}>
+                {card['dev_categories']}
               </div>
             </div>
           )
