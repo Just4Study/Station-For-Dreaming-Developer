@@ -1,47 +1,64 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 
 import style from './teampage.module.css'
 
 const App = ({match}) => {
     const styles = style;
     // const [val, setVal] = useState(0);
-    const [title, setTitle] = useState('타이틀')
-    const [author, setAuthor] = useState('글쓴이')
-    const [teamType, setTeamType] = useState('팀종류')
-    const [category, setCategory] = useState('카테고리')
-    const [deadLine, setDeadLine] = useState('마감일')
-    const [address, setAddress] = useState('거주지')
-    const [introduction, setIntroduction] = useState('업무 소개')
-    const [qualification, setQualification] = useState('자격 요건')
-    const [eligibility, setEligibility] = useState('우대 사항')
+    const [title, setTitle] = useState('')
+    const [author, setAuthor] = useState('')
+    const [teamType, setTeamType] = useState('')
+    const [category, setCategory] = useState('')
+    const [deadLine, setDeadLine] = useState('')
+    const [address, setAddress] = useState('')
+    const [introduction, setIntroduction] = useState('')
+    const [preference, setPreference] = useState('')
 
     const { pageId } = match.params;
-    console.log(pageId)
+
+    useEffect(() => {
+        axios.get('http://localhost:8000/post/' + pageId)
+        .then(response => {
+          console.log(response)
+          setTitle(response.data['title'])
+          setAuthor(response.data['author'])
+          setTeamType(response.data['team_type'])
+          setCategory(response.data['dev_category'])
+          setDeadLine(response.data['end_date'])
+          setAddress(response.data['region'])
+          setIntroduction(response.data['comment'])
+          setPreference(response.data['preference'])
+        })
+        .catch(error=> {
+          console.log(error);
+        })
+    }, [pageId])
 
     return (
         <div className={styles.container}>
             <div className={styles.maincontainer}>
                 <div className={styles.titleBox}>
                     <div className={styles.title}>
-                        타이틀
+                        {title}
                     </div>
                     <div className={styles.author}>
-                        글쓴이
+                        {author}
                     </div>
                     <div className={styles.teamtype}>
-                        팀종류
+                        {teamType}
                     </div>
                     <div className={styles.category}>
-                        카테고리
+                        {category}
                     </div>
                 </div>
                 <hr></hr>
                 <div className={style.contentBox}>
                     <div className={styles.deadline}>
-                        마감일
+                        {deadLine}
                     </div>
                     <div className={styles.address}>
-                        거주지
+                        {address}
                     </div>
                     <div className={style.textarealabel}>
                         업무 소개
@@ -49,25 +66,19 @@ const App = ({match}) => {
                     <textarea className={style.introductionarea}
                         id="introduction"
                         name="introduction"
-                        readonly="readonly">
+                        readonly="readonly"
+                        value={introduction}
+                    >
                     </textarea>
                     <div className={style.textarealabel}>
-                        자격 조건
+                        선호
                     </div>
                     <textarea className={style.eligibilityarea}
                         id="introduction"
                         name="introduction"
-                        readonly="readonly">
+                        readonly="readonly"
+                        value={preference}>
                     </textarea>
-                    <div className={style.textarealabel}>
-                        우대 사항
-                    </div>
-                    <textarea className={style.preferentialerea}
-                        id="introduction"
-                        name="introduction"
-                        readonly="readonly">
-                    </textarea>
-
                 </div>
             </div>
         </div>

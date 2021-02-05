@@ -20,7 +20,6 @@ const App = () => {
 
   const history = useHistory()
   const toTeamPage = (url) => {
-    console.log(url)
     history.push(url)
   }
 

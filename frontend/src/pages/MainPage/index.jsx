@@ -25,7 +25,6 @@ const App = () => {
     history.push('/writing')
   }
   const toTeamPage = (url) => {
-    console.log(url)
     history.push(url)
   }
 
@@ -37,7 +36,6 @@ const App = () => {
   useEffect(() => {
     axios.get('http://localhost:8000/post/')
       .then(response => {
-        console.log(response)
         setCards(response.data)
       })
       .catch(error=> {
@@ -128,7 +126,7 @@ const App = () => {
       </div>
       <div className={styles.cardsContainer}>
         {cards.map((card) => {
-          let url = '/teampage/' + card['auto_id']
+          let url = '/team/' + card['auto_id']
           return (
             <div className={styles.cardContainer}>
               <div className={styles.cardTeamType}>
