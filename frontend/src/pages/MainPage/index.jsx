@@ -29,19 +29,21 @@ const App = () => {
     history.push(url)
   }
 
+  const styles = mainPageStyle
+
+  const [cards, setCards] = useState([])
+
+
   useEffect(() => {
     axios.get('http://localhost:8000/post/')
       .then(response => {
         console.log(response)
+        setCards(response.data)
       })
       .catch(error=> {
         console.log(error);
       })
   }, [])
-
-  const styles = mainPageStyle
-
-  const [cards, setCards] = useState([])
 
   const category_list = ['Web', 'App', 'AI']
   const categories = category_list.map((option) => {
@@ -64,6 +66,7 @@ const App = () => {
   useEffect(() => {
     // axios로 카드들 가져와서 state : cards에 넣어두기.
     // 아래는 예시
+    /*
     let cards = [
       {
         title: 'title1',
@@ -79,71 +82,9 @@ const App = () => {
         dev_categories: 'Web',
         id:2,
       },
-      {
-        title: 'title2',
-        author: 'author2',
-        team_type: 'team_type2',
-        dev_categories: 'Web',
-        id:3,
-      },
-      {
-        title: 'title2',
-        author: 'author2',
-        team_type: 'team_type2',
-        dev_categories: 'Web',
-        id:4,
-      },
-      {
-        title: 'title2',
-        author: 'author2',
-        team_type: 'team_type2',
-        dev_categories: 'Web',
-        id:1,
-      },
-      {
-        title: 'title2',
-        author: 'author2',
-        team_type: 'team_type2',
-        dev_categories: 'Web',
-        id:1,
-      },
-      {
-        title: 'title2',
-        author: 'author2',
-        team_type: 'team_type2',
-        dev_categories: 'Web',
-        id:1,
-      },
-      {
-        title: 'title2',
-        author: 'author2',
-        team_type: 'team_type2',
-        dev_categories: 'Web',
-        id:1,
-      },
-      {
-        title: 'title2',
-        author: 'author2',
-        team_type: 'team_type2',
-        dev_categories: 'Web',
-        id:1,
-      },
-      {
-        title: 'title2',
-        author: 'author2',
-        team_type: 'team_type2',
-        dev_categories: 'Web',
-        id:1,
-      },
-      {
-        title: 'title2',
-        author: 'author2',
-        team_type: 'team_type2',
-        dev_categories: 'Web',
-        id:1,
-      },
     ]
     setCards(cards)
+    */
   }, [])
 
   return (
@@ -187,7 +128,7 @@ const App = () => {
       </div>
       <div className={styles.cardsContainer}>
         {cards.map((card) => {
-          let url = '/teampage/' + card['id']
+          let url = '/teampage/' + card['auto_id']
           return (
             <div className={styles.cardContainer}>
               <div className={styles.cardTeamType}>
@@ -203,7 +144,7 @@ const App = () => {
                 {card['author']}
               </div>
               <div className={styles.cardCategoryBox}>
-                {card['dev_categories']}
+                {card['dev_category']}
               </div>
             </div>
           )
