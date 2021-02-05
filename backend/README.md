@@ -19,10 +19,10 @@ python manage.py runserver
 ~~~
 class Mentor(models.Model):
     auto_id = AutoField(primary_key=True)
-    name = CharField(max_length=10) # 멘토님 성함
+    name = CharField(max_length=10) # 성함
     company = CharField(max_length=20) # 회사
-    dev_category = CharField(max_length = 10) # 멘토 개발 분야
-    description = CharField(max_length = 30) # 멘토 한 줄 소개
+    dev_category = CharField(max_length = 10) # 개발 분야
+    description = CharField(max_length = 30) # 한 줄 소개
     content = TextField() # 내용
     image = ImageField(upload_to="img") # 이미지 url
 ~~~
@@ -30,14 +30,14 @@ class Mentor(models.Model):
 ~~~
 class Post(models.Model):
     auto_id = AutoField(primary_key=True) 
-    title = CharField(max_length=200) #제목
-    author = CharField(max_length=20) #작성자
-    team_type = CharField(max_length=20) #팀 유형
-    region = CharField(max_length= 10) #지역
-    end_date = DateField(null = True) #마감날짜
-    preference = CharField(max_length=20, blank=True) #우대사항
-    dev_category = CharField(max_length = 10) #개발 분야
-    comment = TextField() #하고 싶은 말
+    title = CharField(max_length=200) # 제목
+    author = CharField(max_length=20) # 작성자
+    team_type = CharField(max_length=20) # 팀 유형
+    region = CharField(max_length= 10) # 지역
+    end_date = DateField(null = True) # 마감날짜
+    preference = CharField(max_length=20, blank=True) # 우대사항
+    dev_category = CharField(max_length = 10) # 개발 분야
+    comment = TextField() # 하고 싶은 말
 ~~~
 
 ~~~
