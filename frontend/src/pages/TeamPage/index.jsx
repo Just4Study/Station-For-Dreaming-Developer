@@ -34,14 +34,6 @@ const App = () => {
                     <div className={style.textarealabel}>
                         업무 소개
                     </div>
-                    <textarea className={style.introductionarea}
-                        id="introduction"
-                        name="introduction"
-                        readonly="readonly">
-                    </textarea>
-                    <div className={style.textarealabel}>
-                        자격 조건
-                    </div>
                     <textarea className={style.eligibilityarea}
                         id="introduction"
                         name="introduction"
