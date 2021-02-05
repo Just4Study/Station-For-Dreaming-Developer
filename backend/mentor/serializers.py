@@ -6,4 +6,4 @@ class MentorSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Mentor
-        fields = ('name', 'company', 'dev_category', 'description', 'content', 'image')
+        fields = ('auto_id', 'name', 'company', 'dev_category', 'description', 'content', 'image')

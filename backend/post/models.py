@@ -1,6 +1,7 @@
 from django.db import models
 
 class Post(models.Model):
+    auto_id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=200, blank = True)
     author = models.CharField(max_length=20, blank = True)
     team_type = models.CharField(max_length=20)
