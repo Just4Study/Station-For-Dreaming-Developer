@@ -22,7 +22,7 @@ class Mentor(models.Model):
     name = CharField(max_length=10) # 성함
     company = CharField(max_length=20) # 회사
     dev_category = CharField(max_length = 10) # 개발 분야
-    description = CharField(max_length = 30) # 한 줄 소개
+    url = CharField(max_length = 254) # 포트폴리오 url
     content = TextField() # 내용
     image = ImageField(upload_to="img") # 이미지 url
 ~~~
