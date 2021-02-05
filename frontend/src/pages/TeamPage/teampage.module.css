@@ -1,7 +1,191 @@
-input:focus {
-    outline:none;
-}
-  
+
+
+input:focus,
 button:focus {
     outline:none;
+}
+
+body {
+    -ms-overflow-style:none; 
+}
+body::-webkit-scrollbar { 
+    display:none; 
+}
+
+
+hr {
+    position: relative;
+    width: 1919.5px;
+    height: 0;
+    margin: 0;
+    left: -269px;
+    border: solid 2px #030222;
+}
+
+.container {
+    width: 100%;
+  }
+
+.maincontainer {
+    margin-left: 265px;
+    width: 747px;
+  }
+
+.titleBox {
+    display: block;
+    height: 297px;
+}
+
+.contentBox {
+    display: block;
+    height: 677px;
+}
+
+.title {
+    box-sizing: border-box;
+    padding-top: 60px;
+
+    font-family: 'arita-dotum4.0otfsemibold';
+    font-size: 35.5px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: left;
+    color: #030222;
+}
+
+.author {
+    padding-top: 34px;
+
+    font-family: 'arita-dotum4.0otfmedium';
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    text-align: left;
+    color: #63636d;
+}
+
+.teamtype {
+    padding-top: 24px;
+
+    font-family: 'arita-dotum4.0otfmedium';
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    text-align: left;
+    color: #030222;
+}
+
+.category {
+    padding-top: 24px;
+
+    font-family: 'arita-dotum4.0otfmedium';
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    text-align: left;
+    color: #030222;
+}
+
+.deadline {
+    padding-top: 46px;
+
+    font-family: 'arita-dotum4.0otfmedium';
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    text-align: left;
+    color: #030222;
+}
+
+.address {
+    padding-top: 24px;
+
+    font-family: 'arita-dotum4.0otfmedium';
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    text-align: left;
+    color: #030222;
+}
+
+.textarealabel {
+    padding-top: 24px;
+
+    font-family: 'arita-dotum4.0otfmedium';
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    text-align: left;
+    color: #030222;
+}
+
+.introductionarea {
+    box-sizing: border-box;
+    width: 747px;
+    height: 166px;
+    resize: none;
+
+    font-family: 'arita-dotum4.0otfmedium';
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    text-align: left;
+    color: #030222;
+}
+
+.eligibilityarea {
+    box-sizing: border-box;
+    width: 747px;
+    height: 90px;
+    resize: none;
+
+    font-family: 'arita-dotum4.0otfmedium';
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    text-align: left;
+    color: #030222;
+}
+.preferentialerea {
+    box-sizing: border-box;
+    width: 747px;
+    height: 90px;
+    resize: none;
+
+    font-family: 'arita-dotum4.0otfmedium';
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    text-align: left;
+    color: #030222;
 }
