@@ -27,7 +27,7 @@ const App = () => {
     setInfos(infos => ({ ...infos, [name]: value }));
   }
 
-   async function buttonHandler() {
+  async function buttonHandler() {
     console.log('버튼클릭');
     setSubmit(true);
     await sleep(1000);
@@ -47,30 +47,33 @@ const App = () => {
 
 
 
-  useEffect((isSubmit) => {
-    axios.post(
-      'http://localhost:8000/user/login',
-      {
-        user_name: '',
-        email: infos.email,
-        password: infos.password,
-      },
-      {},
-    ).then((response) => {
-      if (response) {
-        changeIsLoggined(true);
-        changeName(response.name);
-        changeEmail(response.email);
-        console.log('로그인됨');
-        history.push('/')
-      } else {
+  useEffect(() => {
+    console.log(isSubmit)
+    if (isSubmit) {
+      axios.post(
+        'http://localhost:8000/user/login',
+        {
+          user_name: '',
+          email: infos.email,
+          password: infos.password,
+        },
+        {},
+      ).then((response) => {
+        if (response) {
+          changeIsLoggined(true);
+          changeName(response.name);
+          changeEmail(response.email);
+          console.log('로그인됨');
+          history.push('/')
+        } else {
+          alert('이메일 혹은 비밀번호가 틀렸습니다.');
+        }
+      }).catch((error) => {
+        console.log(error);
         alert('이메일 혹은 비밀번호가 틀렸습니다.');
-      }
-    }).catch((error) => {
-      console.log(error);
-      console.log('이메일 혹은 비밀번호가 틀렸습니다.');
-    });
-  }, [isSubmit])
+      });
+    }
+  })
 
   return (
     <div className={styles.container}>
