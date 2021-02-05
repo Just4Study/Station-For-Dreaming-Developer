@@ -158,23 +158,6 @@ hr {
     color: #030222;
 }
 
-.eligibilityarea {
-    box-sizing: border-box;
-    width: 747px;
-    height: 90px;
-    margin-top: 8px;
-    resize: none;
-
-    font-family: 'arita-dotum4.0otfmedium';
-    font-size: 18px;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.21;
-    letter-spacing: normal;
-    text-align: left;
-    color: #030222;
-}
 .preferentialerea {
     box-sizing: border-box;
     width: 747px;

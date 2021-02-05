@@ -43,7 +43,7 @@ class LoginView(View):
         )
 
         if User.objects.filter(email=data['email'], password=data['password']).exists() == True:
-            return JsonResponse({"message": "로그인에 성공하셨습니다."}, status=200)
+            return JsonResponse({"message": "로그인에 성공하셨습니다.", "name" : data['user_name']}, status=200)
         else:
             return JsonResponse({"message": "이메일이나 비밀번호가 일치하지 않습니다."}, status=401)
 

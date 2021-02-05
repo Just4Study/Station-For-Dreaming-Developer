@@ -71,14 +71,15 @@ const App = ({match}) => {
                     >
                     </textarea>
                     <div className={style.textarealabel}>
-                        선호
+                        우대 사항
                     </div>
-                    <textarea className={style.eligibilityarea}
+                    <textarea className={style.preferentialerea}
                         id="introduction"
                         name="introduction"
                         readonly="readonly"
                         value={preference}>
                     </textarea>
+
                 </div>
             </div>
         </div>
