@@ -4,14 +4,76 @@
 }
 
 .subHeaderContainer {
+  display: flex;
   width: 100%;
-  height: 100px;
+  height: 46px;
   border-bottom: solid 3px;
+  justify-content: center;
+}
+
+.filterImgContainer {
+  height: 100%;
+  border-left: solid 2px #030222;
+  border-right: solid 2px #030222;
+}
+
+.filterImg {
+  width: 16px;
+  height: 17.4px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 13.7px;
+  padding-bottom: 13.7px;
+  margin: 0;
+}
+
+.filterBox {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.23;
+  letter-spacing: normal;
+  background-color: white;
+  width: 155.3px;
+  height: 100%;
+  text-align-last: center;
+  border-right: solid 2px #030222;
+  border-bottom: none;
+  border-top: none;
+}
+
+.penImgContainer {
+  width: 80px;
+  height: 100%;
+  border-left: solid 2px #030222;
+  border-right: solid 2px #030222;
+  text-align: center;
+  margin-left: 37.7%;
+}
+
+.penImg {
+  width: 21px;
+  height: 19.1px;
+  margin-top: 13.7px;
+}
+
+.cardsContainer {
+  width: 1477px;
+  margin: auto;
+  margin-top: 85px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  grid-gap: 90px 9px;
+  padding-left: 60px;
 }
 
 .cardContainer {
-  width: 200px;
-  height: 200px;
+  width: 310px;
+  height: 150px;
   border: solid 3px;
 }
 
