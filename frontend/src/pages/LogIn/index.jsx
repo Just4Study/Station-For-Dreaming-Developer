@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { useHistory } from 'react-router-dom'
 
 import loginstyle from './login.module.css'
 import logo from '../../imgs/logo.png'
+import axios from 'axios'
 
 const App = () => {
   const styles = loginstyle
@@ -9,6 +11,24 @@ const App = () => {
     email: '',
     password: '',
   })
+  const [isLogin, setLogin] = useState(false);
+  const history = useHistory();
+
+  axios.post(
+    'http://127.0.0.1:8000/user/login',
+    {
+    user_name: 'NAME',
+    email: 'MAIN',
+    password: 'PSWD'
+  }, {})
+  .then(function (response) {
+    console.log(response);
+    history.push('/');
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+    
 
   const onChangeHandler = (e) => {
     const { name, value } = e.target;
