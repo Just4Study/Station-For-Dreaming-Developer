@@ -82,7 +82,7 @@
 .cardTeamType {
   text-align: right;
   padding: 20px 33px 0 0;
-  font-family: Arita-dotum-_OTF;
+  font-family: 'arita-dotum4.0otfmedium';
   font-size: 11px;
   font-weight: 500;
   font-stretch: normal;
@@ -92,7 +92,7 @@
 }
 
 .cardTitle {
-  font-family: Arita-dotum-_OTF;
+  font-family: 'arita-dotum4.0otfmedium';
   font-size: 18px;
   font-weight: 600;
   font-stretch: normal;
@@ -106,7 +106,7 @@
 .cardAuthor {
   padding-left: 33px;
   padding-top: 14px;
-  font-family: Arita-dotum-_OTF;
+  font-family: 'arita-dotum4.0otfmedium';
   font-size: 9px;
   font-weight: 500;
   font-stretch: normal;
@@ -123,7 +123,7 @@
   padding: 0px 13px;
   border: solid 1px #030222;
   border-radius: 6px;
-  font-family: Arita-dotum-_OTF;
+  font-family: 'arita-dotum4.0otfmedium';
   font-size: 6px;
   font-weight: 500;
   letter-spacing: normal;
