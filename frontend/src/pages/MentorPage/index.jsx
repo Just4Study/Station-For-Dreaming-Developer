@@ -35,7 +35,7 @@ const App = () => {
               <div className={styles.cardcontentbox}>
                 <div
                   className={styles.cardTitle}
-                  onClick={() => window.location.assign(card['url'])}
+                  onClick={() => window.location.assign('https://' + card['url'])}
                 >
                   {card['name']}
                 </div>
