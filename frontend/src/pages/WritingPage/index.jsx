@@ -10,27 +10,27 @@ const App = () => {
         <div className={styles.container}>
             <div className={styles.maincontainer}>
                 <div className={styles.titleBox}>
-                    <div className={styles.title}>
-                        타이틀
-                    </div>
-                    <div className={styles.author}>
-                        글쓴이
-                    </div>
-                    <div className={styles.teamtype}>
-                        팀종류
-                    </div>
-                    <div className={styles.category}>
-                        카테고리
-                    </div>
+                    <input className={styles.title}
+                        placeholder='타이틀'>
+                    </input>
+                    <input className={styles.author}
+                        placeholder='글쓴이'>
+                    </input>
+                    <input className={styles.teamtype}
+                        placeholder='팀종류'>
+                    </input>
+                    <input className={styles.category}
+                        placeholder='카테고리'>
+                    </input>
                 </div>
                 <hr></hr>
                 <div className={style.contentBox}>
-                    <div className={styles.deadline}>
-                        마감일
-                    </div>
-                    <div className={styles.address}>
-                        거주지
-                    </div>
+                    <input className={styles.deadline}
+                        placeholder='마감일'>
+                    </input>
+                    <input className={styles.address}
+                        placeholder='거주지'>
+                    </input>
                     <div className={style.textarealabel}>
                         업무 소개
                     </div>

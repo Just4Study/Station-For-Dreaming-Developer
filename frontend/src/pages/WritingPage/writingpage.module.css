@@ -43,7 +43,8 @@ hr {
 
 .title {
     box-sizing: border-box;
-    padding-top: 60px;
+    margin-top: 60px;
+    margin-right: 100%;
 
     font-family: 'arita-dotum4.0otfsemibold';
     font-size: 35.5px;
@@ -57,7 +58,8 @@ hr {
 }
 
 .author {
-    padding-top: 34px;
+    margin-top: 34px;
+    margin-right: 100%;
 
     font-family: 'arita-dotum4.0otfmedium';
     font-size: 20px;
@@ -71,7 +73,8 @@ hr {
 }
 
 .teamtype {
-    padding-top: 24px;
+    margin-top: 24px;
+    margin-right: 100%;
 
     font-family: 'arita-dotum4.0otfmedium';
     font-size: 20px;
@@ -85,7 +88,8 @@ hr {
 }
 
 .category {
-    padding-top: 24px;
+    margin-top: 24px;
+    margin-right: 100%;
 
     font-family: 'arita-dotum4.0otfmedium';
     font-size: 20px;
@@ -99,7 +103,8 @@ hr {
 }
 
 .deadline {
-    padding-top: 46px;
+    margin-top: 46px;
+    margin-right: 100%;
 
     font-family: 'arita-dotum4.0otfmedium';
     font-size: 20px;
@@ -113,7 +118,8 @@ hr {
 }
 
 .address {
-    padding-top: 24px;
+    margin-top: 24px;
+    margin-right: 100%;
 
     font-family: 'arita-dotum4.0otfmedium';
     font-size: 20px;
