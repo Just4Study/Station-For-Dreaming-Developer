@@ -1,6 +1,6 @@
 // import React, { useState } from 'react'
 
-import style from './teampage.module.css'
+import style from './writepage.module.css'
 
 const App = () => {
     const styles = style;
@@ -36,26 +36,25 @@ const App = () => {
                     </div>
                     <textarea className={style.introductionarea}
                         id="introduction"
-                        name="introduction"
-                        readonly="readonly">
+                        name="introduction">
                     </textarea>
                     <div className={style.textarealabel}>
                         자격 조건
                     </div>
                     <textarea className={style.eligibilityarea}
                         id="introduction"
-                        name="introduction"
-                        readonly="readonly">
+                        name="introduction">
                     </textarea>
                     <div className={style.textarealabel}>
                         우대 사항
                     </div>
                     <textarea className={style.preferentialerea}
                         id="introduction"
-                        name="introduction"
-                        readonly="readonly">
+                        name="introduction">
                     </textarea>
-
+                    <button className={style.postbutton}>
+                        글 등록하기
+                    </button>
                 </div>
             </div>
         </div>

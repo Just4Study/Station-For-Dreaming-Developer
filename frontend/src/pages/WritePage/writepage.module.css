@@ -189,3 +189,15 @@ hr {
     text-align: left;
     color: #030222;
 }
+
+.postbutton {
+    position: relative;
+    width: 117px;
+    height: 37px;
+    left: 781px;
+    top: -41px;
+    border-radius: 9px;
+    border: solid 1px #030222;
+    color: #ffffff;
+    background-color: #030222;
+}
