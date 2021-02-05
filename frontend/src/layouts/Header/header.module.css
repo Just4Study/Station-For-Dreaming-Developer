@@ -17,6 +17,7 @@
   height: 70px;
   padding: auto;
   padding-top: 17px;
+  cursor: pointer;
 }
 
 .leftMenuContainer {
@@ -66,4 +67,10 @@
   font-weight: 500;
   font-family: 'arita-dotum4.0otfmedium';
   text-align: center;
+}
+
+.toHome,
+.toMentor,
+.toMessage {
+  cursor: pointer;
 }

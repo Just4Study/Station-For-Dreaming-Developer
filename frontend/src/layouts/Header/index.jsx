@@ -1,26 +1,11 @@
 import React, { useState, useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
 
 import headerStyle from './header.module.css'
 import logo from '../../imgs/logo.png'
 
-// eslint-disable-next-line
-import { withRouter } from 'react-router-dom';
-
-function useWindowSize() {
-  const [size, setSize] = useState(window.innerWidth)
-  useEffect(() => {
-    const handleResize = () => {
-      setSize(window.innerWidth)
-    }
-    window.addEventListener('resize', handleResize)
-  }, [])
-  return size
-}
-
 const App = (props) => {
   const styles = headerStyle
-  // eslint-disable-next-line
-  const height = useWindowSize
   const [visible, setVisible] = useState(true)
 
   useEffect(() => {
@@ -40,6 +25,17 @@ const App = (props) => {
     }
   })
 
+  const history = useHistory()
+  const toHome = () => {
+    history.push('/')
+  }
+  const toMentor = () => {
+    history.push('/mentor')
+  }
+  const toMessage = () => {
+    history.push('/message')
+  }
+
   return (
     <div>
     { visible && 
@@ -47,10 +43,20 @@ const App = (props) => {
         <div className={styles.headerContainer}>
           <div className={styles.leftMenuContainer}>
             <div className={styles.left1}>
-              팀원 모집
+              <span 
+                className={styles.toHome}
+                onClick={() => toHome()}
+              >
+                팀원 모집
+              </span>
             </div>
             <div className={styles.left2}>
-              전문가 인터뷰
+              <span 
+                className={styles.toMentor}
+                onClick={() => toMentor()}
+              >
+                전문가 인터뷰
+              </span>
             </div>
           </div>
           <div>
@@ -58,12 +64,17 @@ const App = (props) => {
               src={logo}
               alt='logo'
               className={styles.logoContainer}
-              //onClick
+              onClick={() => toHome()}
             />
           </div>
           <div className={styles.rightMenuContainer}>
             <div className={styles.right2}>
-              쪽지
+              <span 
+                className={styles.toMessage}
+                onClick={() => toMessage()}
+              >
+                쪽지
+              </span>
             </div>
             <div className={styles.right1}>
               홍길동
