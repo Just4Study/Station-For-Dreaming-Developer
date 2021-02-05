@@ -43,15 +43,6 @@ const App = () => {
       })
   }, [])
 
-  const category_list = ['Web', 'App', 'AI']
-  const categories = category_list.map((option) => {
-    return <option value={option} key={option}>{option}</option>
-  })
-  const [currCategory, setCurrCategory] = useState('') // current option
-  const onCategoryChangeHandler = (e) => {
-    setCurrCategory(e.target.value)
-  }
-
   const type_list = ['창업', '프로젝트', '대회']
   const team_types = type_list.map((option) => {
     return <option value={option} key={option}>{option}</option>
@@ -61,29 +52,37 @@ const App = () => {
     setCurrType(e.target.value)
   }
 
+  const category_list = ['Web', 'App', 'AI']
+  const categories = category_list.map((option) => {
+    return <option value={option} key={option}>{option}</option>
+  })
+  const [currCategory, setCurrCategory] = useState('') // current option
+  const onCategoryChangeHandler = (e) => {
+    setCurrCategory(e.target.value)
+  }
+
+  const onChangeHandler = (url) => {
+    axios.get(url)
+      .then(response => {
+        setCards(response.data)
+      })
+      .catch(error=> {
+        console.log(error);
+      })
+  }
+
   useEffect(() => {
-    // axios로 카드들 가져와서 state : cards에 넣어두기.
-    // 아래는 예시
-    /*
-    let cards = [
-      {
-        title: 'title1',
-        author: 'author1',
-        team_type: 'team_type1',
-        dev_categories: 'Web',
-        id:1,
-      },
-      {
-        title: 'title2',
-        author: 'author2',
-        team_type: 'team_type2',
-        dev_categories: 'Web',
-        id:2,
-      },
-    ]
-    setCards(cards)
-    */
-  }, [])
+    let url = 'http://localhost:8000/post?';
+    if(currType !== '' && currCategory !== '') {
+      onChangeHandler(url + 'team_type=' + currType + '&' + 'dev_category=' + currCategory)
+    } else if(currType === '' && currCategory !== '') {
+      onChangeHandler(url + 'dev_category=' + currCategory)
+    } else if(currType !== '' && currCategory === '') {
+      onChangeHandler(url + 'team_type=' + currType)
+    } else {
+      onChangeHandler('http://localhost:8000/post')
+    }
+  }, [currType, currCategory])
 
   return (
     <div className={styles.container}>
@@ -98,19 +97,19 @@ const App = () => {
         <div className={styles.filterContainer}>
           <select
             className={styles.filterBox}
-            value={currCategory}
-            onChange={(e) => onCategoryChangeHandler(e)}
+            value={currType}
+            onChange={(e) => onTypeChangeHandler(e)}
           >
-            <option value='' selected disabled hidden>팀 종류</option>
-            {categories}
+            <option value='' selected>팀 종류</option>
+            {team_types}
           </select>
           <select
             className={styles.filterBox}
-            value={currType} 
-            onChange={(e) => onTypeChangeHandler(e)}
+            value={currCategory} 
+            onChange={(e) => onCategoryChangeHandler(e)}
           >
-            <option value='' selected disabled hidden>카테고리</option>
-            {team_types}
+            <option value='' selected>카테고리</option>
+            {categories}
           </select>
         </div>
         <div 
