@@ -12,6 +12,11 @@ import mainPageStyle from './mainPage.module.css'
 
 
 const App = () => {
+
+  // const { isLoggined } = useRootData(({ authStore }) => ({
+  //   isLoggined: authStore.isLoggined.get()
+  // }))
+
   //const history = useHistory()
   //useEffect(() => {
   //  if(!isLoggined) {

@@ -35,10 +35,7 @@ const App = () => {
   }
 
 
-  const { isLoggined, name, email, changeIsLoggined, changeName, changeEmail } = useRootData(({ authStore }) => ({
-    isLoggined: authStore.isLoggined.get(),
-    name: authStore.name.get(),
-    email: authStore.email.get(),
+  const { changeIsLoggined, changeName, changeEmail } = useRootData(({ authStore }) => ({
     changeIsLoggined: authStore.changeIsLoggined,
     changeName: authStore.changeName,
     changeEmail: authStore.changeEmail,
