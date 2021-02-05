@@ -8,7 +8,7 @@ source venv/bin/activate
 python -m pip install --upgrade pip
 pip install -r deploy/requirements.txt
 
-python manage.py makemigrations
+python manage.py makemigrations post user mentor
 python manage.py migrate
 python manage.py runserver
 ~~~
