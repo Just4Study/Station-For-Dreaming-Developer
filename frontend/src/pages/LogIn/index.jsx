@@ -14,8 +14,8 @@ function sleep(ms) {
 
 
 const App = () => {
-  const history = useHistory()
   const styles = loginstyle
+  const history = useHistory()
   const [isSubmit, setSubmit] = useState(false);
   const [infos, setInfos] = useState({
     email: '',

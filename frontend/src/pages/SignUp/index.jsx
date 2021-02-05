@@ -1,11 +1,21 @@
-import React, { useState } from 'react'
+import useRootData from '../../stores/useRootData.js'
+
+import React, { useEffect, useState } from 'react'
+import { useHistory } from 'react-router-dom'
 
 import signupstyle from './signup.module.css'
 import logo from '../../imgs/logo.png'
+import axios from 'axios'
+
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 
 const App = () => {
   const styles = signupstyle
+  const history = useHistory()
   const [infos, setInfos] = useState({
     email: '',
     password: '',
@@ -18,7 +28,7 @@ const App = () => {
 
   const onChangeHandler = (e) => {
     const { name, value } = e.target;
-    setInfos(infos => ({...infos, [name]: value}));
+    setInfos(infos => ({ ...infos, [name]: value }));
   }
 
   return (
@@ -29,26 +39,11 @@ const App = () => {
           alt='logo'
           className={styles.logoContainer}
         />
-        <div className={styles.emailContainer}>
-          <input
-            className={styles.emailBox}
-            placeholder='EMAIL'
-            name='email'
-            value={infos['email']}
-            onChange={(e) => onChangeHandler(e)}
-          />
-          <button
-            className={styles.emailRequestBtn}
-            // onclick={}
-          >
-            요청
-          </button>
-        </div>
         <input
           className={styles.inputBox}
-          placeholder='인증번호'
-          name='인증번호'
-          value={infos['인증번호']}
+          placeholder='EMAIL'
+          name='email'
+          value={infos['email']}
           onChange={(e) => onChangeHandler(e)}
         />
         <input
@@ -77,13 +72,6 @@ const App = () => {
           placeholder='SCHOOl'
           name='school'
           value={infos['school']}
-          onChange={(e) => onChangeHandler(e)}
-        />
-        <input
-          className={styles.inputBox}
-          placeholder='DEPARTMENT'
-          name='department'
-          value={infos['department']}
           onChange={(e) => onChangeHandler(e)}
         />
         <div className={styles.signUpBtnContainer}>

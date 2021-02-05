@@ -1,7 +1,10 @@
 .container {
   width: 100%;
-  height: 100vh;
-  background-image: url('../../imgs/signUpBackground.png');
+  background: url('../../imgs/signUpBackground.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .logoContainer {
@@ -14,7 +17,8 @@
 .signUpContainer {
   width: 406px;
   margin: auto;
-  padding-top: 5%;
+  padding-top: 6%;
+  padding-bottom: 12.2%;
 }
 
 .inputBox {
@@ -24,6 +28,7 @@
   margin-left: 20px;
   border-radius: 24px;
   border: solid 3px #c2e9fb;
+  font-family: 'arita-dotum4.0otfsemibold';
   font-size: 14px;
   color: #c2e9fb;
   padding: 0;
@@ -31,42 +36,11 @@
   background-color: rgba(255, 255, 255, 0);
 }
 
-.emailContainer {
-  width: 406px;
-  margin-left: 20px;
-}
 
-.emailBox {
-  width: 220.5px;
-  height: 47.9px;
-  margin: 0;
-  margin-bottom: 27px;
-  border-radius: 24px;
-  border: solid 3px #c2e9fb;
-  font-size: 14px;
-  color: #c2e9fb;
-  padding: 0;
-  padding-left: 34px;
-  background-color: rgba(255, 255, 255, 0);
-}
-
-.inputBox::placeholder,
-.emailBox::placeholder {
+.inputBox::placeholder {
   color: #c2e9fb;
 }
 
-.emailRequestBtn {
-  width: 128px;
-  height: 53.9px;
-  padding: 0;
-  margin: 0;
-  margin-left: 17.5px;
-  background-color: #c2e9fb;
-  color: #030222;
-  border-radius: 24px;
-  border: solid 3px #c2e9fb;
-  font-size: 14px;
-}
 
 .signUpBtnContainer {
   width: 406px;
@@ -81,6 +55,7 @@
   border: solid 3px #c2e9fb;
   color: #030222;
   font-size: 13px;
+  font-family: 'arita-dotum4.0otfsemibold';
 }
 
 input:focus {
