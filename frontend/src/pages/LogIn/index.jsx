@@ -17,9 +17,9 @@ const App = () => {
   axios.post(
     'http://127.0.0.1:8000/user/login',
     {
-    user_name: 'NAME',
-    email: 'MAIN',
-    password: 'PSWD'
+    user_name: 'name',
+    email: 'email@gmail.com',
+    password: '123'
   }, {})
   .then(function (response) {
     console.log(response);
