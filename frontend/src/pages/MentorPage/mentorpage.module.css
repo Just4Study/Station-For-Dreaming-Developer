@@ -1,0 +1,103 @@
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.cardsContainer {
+  width: 1477px;
+  margin: auto;
+  margin-top: 85px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+  grid-gap: 90px 9px;
+  padding-left: 50px;
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: flex-start;
+  width: 325px;
+  height: 190px;
+  border: none;
+  box-shadow: 5px 5px 10px grey;
+}
+
+.cardimgbox {
+  min-height: 1px;
+  width: 87px;
+  height: 87px;
+  
+  margin-top: 24px;
+  margin-left: 33px;
+  border-radius: 70%;
+  overflow: hidden;
+  border: 1px solid #030222;
+}
+
+.cardcontentbox {
+  width: 100px;
+}
+
+
+.cardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardTeamType {
+  position: relative;
+  left: 110px;
+  top: 50px;
+  font-family: 'arita-dotum4.0otfmedium';
+  font-size: 11px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.18;
+  letter-spacing: normal;
+}
+
+.cardTitle {
+  font-family: 'arita-dotum4.0otfmedium';
+  font-size: 18px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.22;
+  letter-spacing: normal;
+  padding-left: 22px;
+  padding-top: 35px;
+  cursor: pointer;
+}
+
+.cardAuthor {
+  padding-left: 22px;
+  padding-top: 4px;
+  font-family: 'arita-dotum4.0otfmedium';
+  font-size: 9px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.22;
+  letter-spacing: normal;
+}
+
+.cardCategoryBox {
+  width: 33px;
+  height: 13px;
+  margin-left: 22px;
+  margin-top: 12px;
+  padding: 0px 13px;
+  padding-top: 2px;
+  border: solid 1px #030222;
+  border-radius: 6px;
+  font-family: 'arita-dotum4.0otfmedium';
+  font-size: 6px;
+  font-weight: 500;
+  letter-spacing: normal;
+  color: #030222;
+  text-align: center;
+}
