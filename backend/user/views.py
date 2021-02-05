@@ -20,6 +20,8 @@ class CreateView(View):
             major=data['major'],
         )
 
+        print(data)
+
         if User.objects.filter(email=data['email']).exists() == True:
             return JsonResponse({"message": "이미 존재하는 이메일입니다."}, status=401)
 

@@ -3,9 +3,6 @@ import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import axios from 'axios'
 
-// import { useHistory } from 'react-router-dom'
-
-// import useRootData from '../../stores/useRootData'
 import filter from '../../imgs/filter.png'
 import pen from '../../imgs/pen.jpg'
 
@@ -13,12 +10,6 @@ import mainPageStyle from './mainPage.module.css'
 
 
 const App = () => {
-  //const history = useHistory()
-  //useEffect(() => {
-  //  if(!isLoggined) {
-  //    history.push('/signin')
-  //  }
-  //}, [])
 
   const history = useHistory()
   const toWrite = () => {

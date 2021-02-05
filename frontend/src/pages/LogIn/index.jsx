@@ -45,8 +45,6 @@ const App = () => {
   }))
 
 
-
-
   useEffect(() => {
     console.log(isSubmit)
     if (isSubmit) {
@@ -75,6 +73,7 @@ const App = () => {
     }
   })
 
+  
   return (
     <div className={styles.container}>
       <div className={styles.logInContainer}>
