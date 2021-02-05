@@ -5,7 +5,7 @@ class Mentor(models.Model):
     name = models.CharField(max_length=10)
     company = models.CharField(max_length=20)
     dev_category = models.CharField(max_length = 10)
-    url = models.CharField(max_length = 254)
+    url = models.CharField(max_length = 254, blank = True)
     content = models.TextField()
     image = models.ImageField(upload_to="img")
 
