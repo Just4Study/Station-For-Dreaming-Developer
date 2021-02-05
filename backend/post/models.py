@@ -2,11 +2,12 @@ from django.db import models
 
 class Post(models.Model):
     auto_id = models.AutoField(primary_key=True)
-    title = models.CharField(max_length=200, blank = True)
-    author = models.CharField(max_length=20, blank = True)
+    title = models.CharField(max_length=200)
+    author = models.CharField(max_length=20)
     team_type = models.CharField(max_length=20)
     region = models.CharField(max_length= 10)
     end_date = models.DateField(null = True)
+    preference = models.CharField(max_length=20, blank=True)
     dev_category = models.CharField(max_length = 10)
     comment = models.TextField()
 

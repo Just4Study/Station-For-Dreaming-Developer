@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
 import axios from 'axios'
 
 // import { useHistory } from 'react-router-dom'
@@ -18,6 +19,15 @@ const App = () => {
   //    history.push('/signin')
   //  }
   //}, [])
+
+  const history = useHistory()
+  const toWrite = () => {
+    history.push('/WritingPage')
+  }
+  const toTeamPage = (url) => {
+    console.log(url)
+    history.push(url)
+  }
 
   useEffect(() => {
     axios.get('http://localhost:8000/post/')
@@ -60,66 +70,77 @@ const App = () => {
         author: 'author1',
         team_type: 'team_type1',
         dev_categories: 'Web',
+        id:1,
       },
       {
         title: 'title2',
         author: 'author2',
         team_type: 'team_type2',
         dev_categories: 'Web',
+        id:2,
       },
       {
         title: 'title2',
         author: 'author2',
         team_type: 'team_type2',
         dev_categories: 'Web',
+        id:3,
       },
       {
         title: 'title2',
         author: 'author2',
         team_type: 'team_type2',
         dev_categories: 'Web',
+        id:4,
       },
       {
         title: 'title2',
         author: 'author2',
         team_type: 'team_type2',
         dev_categories: 'Web',
+        id:1,
       },
       {
         title: 'title2',
         author: 'author2',
         team_type: 'team_type2',
         dev_categories: 'Web',
+        id:1,
       },
       {
         title: 'title2',
         author: 'author2',
         team_type: 'team_type2',
         dev_categories: 'Web',
+        id:1,
       },
       {
         title: 'title2',
         author: 'author2',
         team_type: 'team_type2',
         dev_categories: 'Web',
+        id:1,
       },
       {
         title: 'title2',
         author: 'author2',
         team_type: 'team_type2',
         dev_categories: 'Web',
+        id:1,
       },
       {
         title: 'title2',
         author: 'author2',
         team_type: 'team_type2',
         dev_categories: 'Web',
+        id:1,
       },
       {
         title: 'title2',
         author: 'author2',
         team_type: 'team_type2',
         dev_categories: 'Web',
+        id:1,
       },
     ]
     setCards(cards)
@@ -153,23 +174,29 @@ const App = () => {
             {team_types}
           </select>
         </div>
-        <div className={styles.penImgContainer}>
+        <div 
+          className={styles.penImgContainer}
+          onClick={() => toWrite()}
+        >
           <img
               src={pen}
               alt='pen'
               className={styles.penImg}
-              //onClick
           />
         </div>
       </div>
       <div className={styles.cardsContainer}>
         {cards.map((card) => {
+          let url = '/teampage/' + card['id']
           return (
             <div className={styles.cardContainer}>
               <div className={styles.cardTeamType}>
                 {card['team_type']}
               </div>  
-              <div className={styles.cardTitle}>
+              <div 
+                className={styles.cardTitle}
+                onClick={() => toTeamPage(url)}
+              >
                 {card['title']}
               </div>
               <div className={styles.cardAuthor}>
