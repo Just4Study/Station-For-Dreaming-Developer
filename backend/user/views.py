@@ -36,6 +36,7 @@ class CreateView(View):
 class LoginView(View):
     def post(self, request):
         data = json.loads(request.body)
+        print(data)
         User(
             user_name=data['user_name'],
             email=data['email'],
