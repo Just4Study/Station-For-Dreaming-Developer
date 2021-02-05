@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react'
 
 // eslint-disable-next-line
@@ -11,12 +12,6 @@ import mainPageStyle from './mainPage.module.css'
 
 
 const App = () => {
-  const { 
-    // eslint-disable-next-line
-    isLoggined, 
-  } = useRootData(({ authStore }) => ({
-    isLoggined: authStore.isLoggined.get(),
-  }))
   /*
   const history = useHistory()
   useEffect(() => {
