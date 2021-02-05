@@ -5,7 +5,7 @@ urlpatterns = [
 
     #get Method
     #모든 Post List를 리턴 / input : request / return : 성공 시 200 OK, seralized representation 리턴
-    #Filter 기능 추가 : get Method로 넘겨줄 시에 쿼리스트링이 있을 시 필터
+    #Filter 기능 추가 : get Method로 넘겨줄 시에 쿼리스트링이 있을 시 필터 ('team_type', 'region', 'dev_category' Filtering)
 
     #post Method
     #Post 생성 / input : request / return : 성공 시 201 Create 리턴, seralized representation 리턴

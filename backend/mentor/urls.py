@@ -3,10 +3,10 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    
+
     #get Method
     #모든 Mentor List를 리턴 / input : request / return : 성공 시 200 OK, seralized representation 리턴
-    #Filter 기능 추가 : get Method로 넘겨줄 시에 쿼리스트링이 있을 시 필터
+    #Filter 기능 추가 : get Method로 넘겨줄 시에 쿼리스트링이 있을 시 필터 ('dev_category' Filtering)
 
     path('', views.ListMentor.as_view()),
 
