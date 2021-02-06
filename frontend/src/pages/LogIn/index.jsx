@@ -51,6 +51,10 @@ const App = () => {
           user_name: '',
           email: infos.email,
           password: infos.password,
+          header: {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
+          }
         },
         {},
       ).then((response) => {

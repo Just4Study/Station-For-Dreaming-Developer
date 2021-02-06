@@ -9,8 +9,9 @@ import useRootData from '../../stores/useRootData'
 const App = (props) => {
   const styles = headerStyle
 
-  const { name } = useRootData(({ authStore }) => ({
-    name: authStore.name.get()
+  const { name, isLoggined } = useRootData(({ authStore }) => ({
+    name: authStore.name.get(),
+    isLoggined: authStore.isLoggined.get()
   }))
 
   const [visible, setVisible] = useState(true)
@@ -39,9 +40,16 @@ const App = (props) => {
   const toMentor = () => {
     history.push('/mentor')
   }
-  const toMessage = () => {
-    history.push('/message')
-  }
+
+  useEffect(() => {
+    if(!isLoggined) {
+      const pathName = window.location.pathname
+      if(pathName === '/signup' || pathName === '/login') {
+        return;
+      }
+      history.push('/login')
+    }
+  }, [isLoggined])
 
   return (
     <div>

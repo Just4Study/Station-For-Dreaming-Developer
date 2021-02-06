@@ -3,8 +3,6 @@
   height: 100%;
 }
 
-
-
 .cardsContainer {
   width: 1477px;
   margin: auto;
@@ -28,7 +26,7 @@
   min-height: 1px;
   width: 87px;
   height: 87px;
-  
+
   margin-top: 24px;
   margin-left: 33px;
   border-radius: 70%;
@@ -39,7 +37,6 @@
 .cardcontentbox {
   width: 100px;
 }
-
 
 .cardImg {
   width: 100%;

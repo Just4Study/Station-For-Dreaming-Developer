@@ -26,7 +26,7 @@ const App = () => {
             author: author,
             team_type: teamType,
             region: address,
-            // end_date: deadline,
+            end_date: deadline,
             preference : preferential,
             dev_category: category,
             comment: introduction,
