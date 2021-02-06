@@ -16,15 +16,6 @@ const App = (props) => {
 
   const [visible, setVisible] = useState(true)
 
-  useEffect(() => {
-    const pathName = window.location.pathname
-    if(pathName.indexOf('/login') !== -1 || pathName.indexOf('/signup') !== -1) {
-      setVisible(false);
-    } else {
-      setVisible(true);
-    }
-  }, [])
-
   props.history.listen((location) => {
     if(location['pathname'].indexOf('/login') !== -1 || location['pathname'].indexOf('/signup') !== -1) {
       setVisible(false);
@@ -49,6 +40,7 @@ const App = (props) => {
       }
       history.push('/login')
     }
+    // eslint-disable-next-line
   }, [isLoggined])
 
   return (
