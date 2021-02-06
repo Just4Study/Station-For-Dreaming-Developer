@@ -1,4 +1,6 @@
-
+.formInput:hover {
+    border-bottom: 2px solid #1e90ff;
+}
 
 input:focus,
 button:focus {
@@ -12,33 +14,39 @@ body::-webkit-scrollbar {
     display:none; 
 }
 
-
-hr {
-    position: relative;
-    width: 100vw;
-    height: 0;
-    margin: 0;
-    left: -269px;
-    border: solid 2px #030222;
-}
-
-input {
-    box-sizing: border-box;
-}
-
-
-.container {
-    width: 100%;
-  }
-
 .maincontainer {
-    margin-left: 265px;
-    width: 747px;
-  }
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+}
 
 .titleBox {
-    display: block;
-    height: 297px;
+    padding-bottom : 2px;
+    border-bottom : 2px solid;
+}
+
+.formBox {
+    display: flex;
+    align-items: center;
+    padding: 25px 0px 25px 0px;
+}
+
+.formCategory {
+    width:30%;
+    text-align: center;
+}
+
+.formContent {
+    width:70%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+.formName {
+    color : #63636d;
+    font-size : 0.8rem;
+    margin: 15px 0px 3px 0px;
 }
 
 .contentBox {
@@ -46,154 +54,53 @@ input {
     height: 677px;
 }
 
-.title {
-    box-sizing: border-box;
-    margin-top: 60px;
-    margin-right: 100%;
-
+.formInput {
+    display: block;
+    font-size : 1rem;
+    margin-bottom: 2px;
+    border : none;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    border-bottom : 2px solid #ccc;
     font-family: 'arita-dotum4.0otfsemibold';
-    font-size: 32.5px;
-    font-weight: 600;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.19;
-    letter-spacing: normal;
-    text-align: left;
-    color: #030222;
-}
-
-.author {
-    margin-top: 34px;
-    margin-right: 100%;
-
-    font-family: 'arita-dotum4.0otfmedium';
-    font-size: 16.4px;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.21;
-    letter-spacing: normal;
-    text-align: left;
-    color: #63636d;
-}
-
-.teamtype {
-    margin-top: 24px;
-    margin-right: 100%;
-
-    font-family: 'arita-dotum4.0otfmedium';
-    font-size: 16.4px;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.21;
-    letter-spacing: normal;
-    text-align: left;
-    color: #030222;
-}
-
-.category {
-    margin-top: 24px;
-    margin-right: 100%;
-
-    font-family: 'arita-dotum4.0otfmedium';
-    font-size: 16.4px;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.21;
-    letter-spacing: normal;
-    text-align: left;
-    color: #030222;
-}
-
-.deadline {
-    margin-top: 46px;
-    margin-right: 100%;
-
-    font-family: 'arita-dotum4.0otfmedium';
-    font-size: 16.4px;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.21;
-    letter-spacing: normal;
-    text-align: left;
-    color: #030222;
-}
-
-.address {
-    margin-top: 24px;
-    margin-right: 100%;
-
-    font-family: 'arita-dotum4.0otfmedium';
-    font-size: 16.4px;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.21;
-    letter-spacing: normal;
-    text-align: left;
-    color: #030222;
-}
-
-.textarealabel {
-    padding-top: 24px;
-
-    font-family: 'arita-dotum4.0otfmedium';
-    font-size: 20px;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.21;
-    letter-spacing: normal;
-    text-align: left;
-    color: #030222;
+    width: 80%;
+    color : #030222;
 }
 
 .introductionarea {
-    box-sizing: border-box;
-    width: 747px;
-    height: 166px;
-    margin-top: 8px;
-    resize: none;
-
+    width: 80%;
+    height: 170px;
+    border : 2px solid #ccc;
     font-family: 'arita-dotum4.0otfmedium';
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 1rem;
     font-stretch: normal;
     font-style: normal;
-    line-height: 1.21;
     letter-spacing: normal;
     text-align: left;
     color: #030222;
 }
 
 .preferentialerea {
-    box-sizing: border-box;
-    width: 747px;
+    width: 80%;
     height: 90px;
-    margin-top: 8px;
-    resize: none;
-
+    border : 2px solid #ccc;
     font-family: 'arita-dotum4.0otfmedium';
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 1rem;
     font-stretch: normal;
     font-style: normal;
-    line-height: 1.21;
     letter-spacing: normal;
     text-align: left;
     color: #030222;
 }
 
 .postbutton {
-    position: relative;
-    width: 116.4px;
-    height: 37px;
-    left: 781px;
-    top: -41px;
-    border-radius: 9px;
+    margin-right: 12.75%;
+    margin-bottom: 50px;
+    float: right;
+    width: 100px;
+    height: 35px;
+    border-radius: 6px;
     border: solid 1px #030222;
     color: #ffffff;
     background-color: #030222;

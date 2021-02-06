@@ -89,7 +89,7 @@ const App = () => {
             value={currType}
             onChange={(e) => onTypeChangeHandler(e)}
           >
-            <option value='' selected>팀 종류</option>
+            <option value='' selected>팀유형</option>
             {team_types}
           </select>
           <select
@@ -105,11 +105,7 @@ const App = () => {
           className={styles.penImgContainer}
           onClick={() => toWrite()}
         >
-          <img
-              src={pen}
-              alt='pen'
-              className={styles.penImg}
-          />
+          <button className={styles.writeButton}>글쓰기</button> 
         </div>
       </div>
       <div className={styles.cardsContainer}>

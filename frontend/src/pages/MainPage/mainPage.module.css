@@ -1,66 +1,55 @@
-.container {
-  width: 100%;
-  height: 100%;
+select:focus {
+  outline: none;
+}
+
+option {
+  padding : 3px;
 }
 
 .subHeaderContainer {
   display: flex;
-  width: 100%;
-  height: 46px;
-  border-bottom: solid 3px;
-  justify-content: center;
-}
-
-.filterImgContainer {
-  height: 100%;
-  border-left: solid 2px #030222;
-  border-right: solid 2px #030222;
-  margin-left: 15px;
+  margin: auto;
+  height: 50px;
+  width : 95%;
+  border-bottom: 2px solid #ccc;
+  justify-content: flex-start;
+  align-items : center;
 }
 
 .filterImg {
-  width: 16px;
-  height: 17.4px;
-  padding-left: 32px;
-  padding-right: 32px;
-  padding-top: 13.7px;
-  padding-bottom: 13.7px;
-  margin: 0;
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
 }
 
 .filterBox {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 1rem;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.23;
   letter-spacing: normal;
-  background-color: white;
-  width: 155.3px;
-  height: 100%;
+  width: 100px;
   text-align-last: center;
-  border-right: solid 2px #030222;
-  border-bottom: none;
-  border-top: none;
+  border : none;
+  border-right: solid 1px #ccc;
 }
 
 .penImgContainer {
-  width: 80px;
-  height: 100%;
-  border-left: solid 2px #030222;
-  border-right: solid 2px #030222;
-  text-align: center;
-  margin-left: 50.8%;
-  cursor: pointer;
+  position: absolute;
+  top : 105px;
+  right: 2.5%;
 }
 
-.penImg {
-  width: 21px;
-  height: 19.1px;
+.writeButton {
+  width: 4rem;
+  height: 1.5rem;
   margin-top: 13.7px;
+  border : none;
+  background : none;
+  font-size : 1rem;
+  color: #7b68ee
 }
 
 .cardsContainer {
