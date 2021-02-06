@@ -8,17 +8,19 @@
 }
 
 .logoContainer {
-  width: 137.2px;
-  height: 147.5px;
-  margin: 0px 166.7px 40.5px 122px;
+  position: relative;
+  height: 45.8px;
+  left: -71px;
+  margin-bottom: 16px;
   object-fit: contain;
+  border-radius: 24px;
 }
 
 .logInContainer {
   width: 406px;
   margin: auto;
-  padding-top: 15%;
-  padding-bottom: 13.4%;
+  padding-top: 22%;
+  padding-bottom: 14.6%;
 }
 
 .inputBox {
@@ -33,6 +35,7 @@
   padding: 0;
   padding-left: 34px;
   background-color: rgba(255, 255, 255, 0);
+  
 }
 
 .emailContainer {
@@ -66,11 +69,12 @@
   width: 128px;
   height: 32px;
   margin: 0 139px 11px;
-  border-radius: 24px;
-  border: solid 3px #c2e9fb;
-  background-color: #c2e9fb;
   font-size: 14px;
   padding: auto;
+
+  border: solid 0px pink;
+  border-radius: 24px;
+  background-image: linear-gradient(to right, #ec4176, #00d7d4 104%);
 }
 
 

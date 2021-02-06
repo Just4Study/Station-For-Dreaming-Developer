@@ -1,4 +1,4 @@
-import useRootData from '../../stores/useRootData.js'
+
 
 import React, { useEffect, useState, useRef } from 'react'
 import { useHistory } from 'react-router-dom'
@@ -13,6 +13,7 @@ function sleep(ms) {
 }
 
 function isEmail(asValue) {
+  // eslint-disable-next-line
 	var regExp = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
 	return regExp.test(asValue); 
 }
@@ -109,6 +110,7 @@ const App = () => {
         
       });
     }
+    // eslint-disable-next-line
   }, [isSubmit])
 
 
