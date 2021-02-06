@@ -53,7 +53,7 @@ REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
 }
 
-CORS_ORIGIN_WHITELIST = ['http://localhost:3000']
+CORS_ORIGIN_ALLOW_ALL = True
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
