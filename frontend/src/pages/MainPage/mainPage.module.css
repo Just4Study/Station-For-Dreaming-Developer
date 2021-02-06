@@ -59,7 +59,7 @@ option {
 }
 
 .cardsContainer {
-  width: 1477px;
+  width: 100%;
   margin: auto;
   margin-top: 85px;
   display: grid;
