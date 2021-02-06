@@ -3,7 +3,6 @@ import { useHistory } from 'react-router-dom'
 import axios from 'axios'
 
 import filter from '../../imgs/filter.png'
-import pen from '../../imgs/pen.jpg'
 
 import mainPageStyle from './mainPage.module.css'
 

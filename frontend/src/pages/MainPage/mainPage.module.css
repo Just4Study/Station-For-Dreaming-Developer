@@ -7,17 +7,17 @@ select:focus {
 }
 
 option {
-  padding : 3px;
+  padding: 3px;
 }
 
 .subHeaderContainer {
   display: flex;
   margin: auto;
   height: 50px;
-  width : 95%;
+  width: 95%;
   border-bottom: 2px solid #ccc;
   justify-content: flex-start;
-  align-items : center;
+  align-items: center;
 }
 
 .filterImg {
@@ -36,13 +36,14 @@ option {
   letter-spacing: normal;
   width: 100px;
   text-align-last: center;
-  border : none;
+  border: none;
   border-right: solid 1px #ccc;
+  cursor: pointer;
 }
 
 .penImgContainer {
   position: absolute;
-  top : 105px;
+  top: 105px;
   right: 2.5%;
 }
 
@@ -50,10 +51,11 @@ option {
   width: 4rem;
   height: 1.5rem;
   margin-top: 13.7px;
-  border : none;
-  background : none;
-  font-size : 1rem;
-  color: #7b68ee
+  border: none;
+  background: none;
+  font-size: 1rem;
+  color: #7b68ee;
+  cursor: pointer;
 }
 
 .cardsContainer {
@@ -64,6 +66,7 @@ option {
   grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
   grid-gap: 90px 9px;
   padding-left: 50px;
+  padding-bottom: 30px;
 }
 
 .cardContainer {

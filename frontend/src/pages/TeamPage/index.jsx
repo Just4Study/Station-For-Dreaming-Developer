@@ -5,7 +5,6 @@ import style from './teampage.module.css'
 
 const App = ({match}) => {
     const styles = style;
-    // const [val, setVal] = useState(0);
     const [title, setTitle] = useState('')
     const [author, setAuthor] = useState('')
     const [teamType, setTeamType] = useState('')

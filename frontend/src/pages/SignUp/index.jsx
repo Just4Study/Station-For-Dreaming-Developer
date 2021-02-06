@@ -134,6 +134,7 @@ const App = () => {
           placeholder='PASSWORD'
           name='password'
           value={infos['password']}
+          type='password'
           onChange={(e) => onChangeHandler(e)}
         />
         <input
@@ -141,6 +142,7 @@ const App = () => {
           placeholder='PASSWORD CONFIRM'
           name='password_confirm'
           values={infos['password_confirm']}
+          type='password'
           onChange={(e) => onChangeHandler(e)}
         />
         <input

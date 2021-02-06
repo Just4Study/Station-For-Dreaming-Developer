@@ -51,12 +51,16 @@ const App = () => {
           user_name: '',
           email: infos.email,
           password: infos.password,
+          header: {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
+          }
         },
         {},
       ).then((response) => {
         if (response) {
           changeIsLoggined(true);
-          changeName(response.name);
+          changeName(response.data['name']);
           changeEmail(response.email);
           console.log('로그인됨');
           history.push('/')
@@ -91,6 +95,7 @@ const App = () => {
           placeholder='PASSWORD'
           name='password'
           value={infos['password']}
+          type='password'
           onChange={(e) => onChangeHandler(e)}
         />
         <div className={styles.logInBtnContainer}>
