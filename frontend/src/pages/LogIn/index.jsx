@@ -91,6 +91,7 @@ const App = () => {
           placeholder='PASSWORD'
           name='password'
           value={infos['password']}
+          type='password'
           onChange={(e) => onChangeHandler(e)}
         />
         <div className={styles.logInBtnContainer}>
