@@ -68,7 +68,7 @@ const App = (props) => {
                 전문가 인터뷰
               </span>          
               <span className={styles.headerContent}>
-                어서오세요 {name}님!
+                어서오세요 <strong>{name}</strong>님!
               </span>
             </div>
         </div>
