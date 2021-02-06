@@ -48,45 +48,29 @@ const App = (props) => {
     { visible && 
       <div className={styles.container}>
         <div className={styles.headerContainer}>
-          <div className={styles.leftMenuContainer}>
-            <div className={styles.left1}>
+            <img
+              src={logo}
+              alt='logo'
+              className={styles.logo}
+              onClick={() => toHome()}
+            />
+            <div className={styles.headerContentContainer}>
               <span 
-                className={styles.toHome}
+                className={styles.headerContent}
                 onClick={() => toHome()}
               >
                 팀원 모집
               </span>
-            </div>
-            <div className={styles.left2}>
               <span 
-                className={styles.toMentor}
+                className={styles.headerContent}
                 onClick={() => toMentor()}
               >
                 전문가 인터뷰
+              </span>          
+              <span className={styles.headerContent}>
+                어서오세요 {name}님!
               </span>
             </div>
-          </div>
-          <div>
-            <img
-              src={logo}
-              alt='logo'
-              className={styles.logoContainer}
-              onClick={() => toHome()}
-            />
-          </div>
-          <div className={styles.rightMenuContainer}>
-            <div className={styles.right2}>
-              <span 
-                className={styles.toMessage}
-                onClick={() => toMessage()}
-              >
-                쪽지
-              </span>
-            </div>
-            <div className={styles.right1}>
-              {name}
-            </div>
-          </div>
         </div>
       </div>
     }
