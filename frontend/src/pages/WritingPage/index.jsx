@@ -78,6 +78,7 @@ const App = () => {
                         <span className={styles.formName}>마감일</span>
                         <input className={styles.formInput}
                             value={deadline}
+                            placeholder="년도-월-일"
                             onChange={(e) => setDeadline(e.target.value)}>
                         </input>
                         <span className={styles.formName}>선호 지역</span>
