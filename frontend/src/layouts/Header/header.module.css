@@ -1,75 +1,19 @@
-.container {
-  width: 100%;
+.headerContainer {
   height: 104px;
   background-color: #030222;
   color: #c2e9fb;
-}
-
-.headerContainer {
   display: flex;
-  justify-content: center;
-  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.logoContainer {
-  display: block;
-  height: 34.5px;
-  padding: auto;
-  padding-top: 35px;
-  cursor: pointer;
+.logo {
+  margin-left: 30px;
 }
 
-.leftMenuContainer {
+.headerContentContainer {
   display: flex;
-  padding-top: 46px;
-  padding-right: 465px;
-}
-
-.left1 {
-  width: 120px;
-  height: 13px;
-  padding-left: 15px;
-  font-size: 13px;
-  font-weight: 500;
-  font-family: 'arita-dotum4.0otfmedium';
-  text-align: center;
-}
-
-.left2 {
-  width: 120px;
-  height: 13px;
-  font-size: 13px;
-  font-weight: 500;
-  font-family: 'arita-dotum4.0otfmedium';
-  text-align: center;
-}
-
-.rightMenuContainer {
-  display: flex;
-  padding-top: 46px;
-  padding-left: 475px;
-}
-
-.right1 {
-  width: 120px;
-  height: 13px;
-  font-size: 13px;
-  font-weight: 500;
-  font-family: 'arita-dotum4.0otfmedium';
-  text-align: center;
-}
-
-.right2 {
-  width: 120px;
-  height: 13px;
-  font-size: 13px;
-  font-weight: 500;
-  font-family: 'arita-dotum4.0otfmedium';
-  text-align: center;
-}
-
-.toHome,
-.toMentor,
-.toMessage {
-  cursor: pointer;
+  justify-content: space-between;
+  width: 40%;
+  margin-right: 30px;
 }

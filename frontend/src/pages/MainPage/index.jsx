@@ -97,7 +97,7 @@ const App = () => {
             value={currCategory} 
             onChange={(e) => onCategoryChangeHandler(e)}
           >
-            <option value='' selected>카테고리</option>
+            <option value='' selected>개발분야</option>
             {categories}
           </select>
         </div>
