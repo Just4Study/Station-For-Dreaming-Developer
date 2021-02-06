@@ -48,65 +48,77 @@ const App = () => {
         <div className={styles.container}>
             <div className={styles.maincontainer}>
                 <div className={styles.titleBox}>
-                    <input className={styles.title}
-                        placeholder='타이틀'
-                        value={title}
-                        onChange={(e) => setTitle(e.target.value)}>
-                    </input>
-                    <input className={styles.author}
-                        placeholder='글쓴이'
-                        value={author}
-                        onChange={(e) => setAuthor(e.target.value)}>
-                    </input>
-                    <input className={styles.teamtype}
-                        placeholder='팀종류'
-                        value={teamType}
-                        onChange={(e) => setTeamType(e.target.value)}>
-                    </input>
-                    <input className={styles.category}
-                        placeholder='카테고리'
-                        value={category}
-                        onChange={(e) => setCategory(e.target.value)}>
-                    </input>
+                    <h1>팀 모집글</h1>
                 </div>
-                <hr></hr>
-                <div className={style.contentBox}>
-                    <input className={styles.deadline}
-                        placeholder='마감일'
-                        value={deadline}
-                        onChange={(e) => setDeadline(e.target.value)}>
-                    </input>
-                    <input className={styles.address}
-                        placeholder='거주지'
-                        value={address}
-                        onChange={(e) => setAddress(e.target.value)}>
-                    </input>
-                    <div className={style.textarealabel}>
-                        업무 소개
+                <div className={styles.formBox}>
+                    <div className={styles.formCategory}>
+                        기본 사항
                     </div>
-                    <textarea className={style.introductionarea}
-                        id="introduction"
-                        name="introduction"
-                        value={introduction}
-                        onChange={(e) => setIntroduction(e.target.value)}>
-                    </textarea>
-                    <div className={style.textarealabel}>
-                        우대 사항
+                    <div className={styles.formContent}>
+                        <span className={styles.formName}>제목</span>
+                        <input className={styles.formInput}
+                            value={title}
+                            onChange={(e) => setTitle(e.target.value)}>
+                        </input>
+                        <span className={styles.formName}>작성자</span>
+                        <input className={styles.formInput}
+                            value={author}
+                            onChange={(e) => setAuthor(e.target.value)}>
+                        </input>
+                        <span className={styles.formName}>팀유형</span>
+                        <input className={styles.formInput}
+                            value={teamType}
+                            onChange={(e) => setTeamType(e.target.value)}>
+                        </input>
+                        <span className={styles.formName}>개발분야</span>
+                        <input className={styles.formInput}
+                            value={category}
+                            onChange={(e) => setCategory(e.target.value)}>
+                        </input>
+                        <span className={styles.formName}>마감일</span>
+                        <input className={styles.formInput}
+                            value={deadline}
+                            onChange={(e) => setDeadline(e.target.value)}>
+                        </input>
+                        <span className={styles.formName}>선호 지역</span>
+                        <input className={styles.formInput}
+                            value={address}
+                            onChange={(e) => setAddress(e.target.value)}>
+                        </input>
                     </div>
-                    <textarea 
-                        className={style.preferentialerea}
-                        id="preferential"
-                        name="preferential"
-                        value={preferential}
-                        onChange={(e) => setPreferential(e.target.value)}>
-                    </textarea>
-                    <button 
-                        className={style.postbutton}
-                        onClick={() => postRegistration()}
-                    >
-                        글 등록하기
-                    </button>
                 </div>
+                <div className={style.formBox}>
+                    <div className={style.formCategory}>
+                        팀 소개
+                    </div>
+                    <div className={styles.formContent}>
+                        <textarea className={style.introductionarea}
+                            id="introduction"
+                            name="introduction"
+                            value={introduction}
+                            onChange={(e) => setIntroduction(e.target.value)}>
+                        </textarea>
+                    </div>
+                </div>
+                <div className={style.formBox}>
+                    <div className={style.formCategory}>
+                        바라는 점
+                    </div>
+                    <div className={styles.formContent}>
+                        <textarea className={style.preferentialerea}
+                            id="preferential"
+                            name="preferential"
+                            value={preferential}
+                            onChange={(e) => setPreferential(e.target.value)}>
+                        </textarea>
+                    </div>
+                </div>
+                <button 
+                    className={style.postbutton}
+                    onClick={() => postRegistration()}
+                >
+                    등록!
+                </button>
             </div>
         </div>
     )
