@@ -73,7 +73,7 @@ const App = (props) => {
                 className={styles.headerContent}
                 onClick={() => toMentor()}
               >
-                전문가 인터뷰
+                멘토 찾기
               </span>          
               <span className={styles.headerContent}>
                 어서오세요 <strong>{name}</strong>님!
