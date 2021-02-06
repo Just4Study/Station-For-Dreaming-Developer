@@ -1,16 +1,21 @@
+.cardContainer:hover {
+  border: 1px solid #ccc;
+}
+
 .container {
   width: 100%;
   height: 100%;
 }
 
 .cardsContainer {
-  width: 1477px;
+  width: 100%;
   margin: auto;
   margin-top: 85px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
   grid-gap: 90px 9px;
   padding-left: 50px;
+  padding-bottom: 30px;
 }
 
 .cardContainer {
