@@ -2,6 +2,10 @@ select:focus {
   outline: none;
 }
 
+.cardContainer:hover {
+  border: 1px solid #ccc;
+}
+
 option {
   padding : 3px;
 }

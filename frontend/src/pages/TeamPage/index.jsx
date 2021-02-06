@@ -39,47 +39,62 @@ const App = ({match}) => {
         <div className={styles.container}>
             <div className={styles.maincontainer}>
                 <div className={styles.titleBox}>
-                    <div className={styles.title}>
-                        {title}
+                    <h1>{title}</h1>
+                </div>
+                <div className={styles.formBox}>
+                    <div className={styles.formCategory}>
+                        기본 사항
                     </div>
-                    <div className={styles.author}>
-                        {author}
-                    </div>
-                    <div className={styles.teamtype}>
-                        {teamType}
-                    </div>
-                    <div className={styles.category}>
-                        {category}
+                    <div className={styles.formContent}>
+                        <span className={styles.formName}>작성자</span>
+                        <div className={styles.formOutput}>
+                            {author}
+                        </div>
+                        <span className={styles.formName}>팀유형</span>
+                        <div className={styles.formOutput}>
+                            {teamType}
+                        </div>
+                        <span className={styles.formName}>개발분야</span>
+                        <div className={styles.formOutput}>
+                            {category}
+                        </div>
+                        <span className={styles.formName}>마감일</span>
+                        <div className={styles.formOutput}>
+                            {deadLine}
+                        </div>
+                        <span className={styles.formName}>선호 지역</span>
+                        <div className={styles.formOutput}>
+                            {address}
+                        </div>
                     </div>
                 </div>
-                <hr></hr>
-                <div className={style.contentBox}>
-                    <div className={styles.deadline}>
-                        {deadLine}
+                <div className={styles.formBox}>
+                    <div className={styles.formCategory}>
+                        팀 소개
                     </div>
-                    <div className={styles.address}>
-                        {address}
-                    </div>
-                    <div className={style.textarealabel}>
-                        업무 소개
-                    </div>
-                    <textarea className={style.introductionarea}
+                    <div className={styles.formContent}>
+                        <textarea className={style.introductionarea}
                         id="introduction"
                         name="introduction"
                         readonly="readonly"
                         value={introduction}
-                    >
-                    </textarea>
-                    <div className={style.textarealabel}>
-                        우대 사항
+                        >       
+                        </textarea>
                     </div>
-                    <textarea className={style.preferentialerea}
+                </div>
+                <div className={styles.formBox}>
+                    <div className={styles.formCategory}>
+                        바라는 점
+                    </div>
+                    <div className={styles.formContent}>
+                        <textarea className={style.preferentialerea}
                         id="introduction"
                         name="introduction"
                         readonly="readonly"
-                        value={preference}>
-                    </textarea>
-
+                        value={preference}
+                        >       
+                        </textarea>
+                    </div>
                 </div>
             </div>
         </div>
