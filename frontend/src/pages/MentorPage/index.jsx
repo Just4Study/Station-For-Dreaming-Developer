@@ -14,7 +14,6 @@ const App = () => {
   useEffect(() => {
     axios.get('http://localhost:8000/mentor/')
       .then(response => {
-        console.log(response.data)
         setCards(response.data)
       })
   }, [])

@@ -60,7 +60,7 @@ const App = () => {
       ).then((response) => {
         if (response) {
           changeIsLoggined(true);
-          changeName(response.name);
+          changeName(response.data['name']);
           changeEmail(response.email);
           console.log('로그인됨');
           history.push('/')
