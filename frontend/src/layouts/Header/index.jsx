@@ -16,6 +16,15 @@ const App = (props) => {
 
   const [visible, setVisible] = useState(true)
 
+  useEffect(() => {
+    const pathName = window.location.pathname
+    if(pathName.indexOf('/login') !== -1 || pathName.indexOf('/signup') !== -1) {
+      setVisible(false);
+    } else {
+      setVisible(true);
+    }
+  }, [name])
+
   props.history.listen((location) => {
     if(location['pathname'].indexOf('/login') !== -1 || location['pathname'].indexOf('/signup') !== -1) {
       setVisible(false);
