@@ -49,11 +49,6 @@ body::-webkit-scrollbar {
     margin: 15px 0px 3px 0px;
 }
 
-.contentBox {
-    display: block;
-    height: 677px;
-}
-
 .formInput {
     display: block;
     font-size : 1rem;
@@ -72,7 +67,7 @@ body::-webkit-scrollbar {
     width: 80%;
     height: 170px;
     border : 2px solid #ccc;
-    font-family: 'arita-dotum4.0otfmedium';
+    font-family: 'arita-dotum4.0otfsemibold';
     font-size: 1rem;
     font-stretch: normal;
     font-style: normal;
@@ -85,7 +80,7 @@ body::-webkit-scrollbar {
     width: 80%;
     height: 90px;
     border : 2px solid #ccc;
-    font-family: 'arita-dotum4.0otfmedium';
+    font-family: 'arita-dotum4.0otfsemibold';
     font-size: 1rem;
     font-stretch: normal;
     font-style: normal;

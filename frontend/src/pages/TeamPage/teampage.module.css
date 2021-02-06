@@ -1,4 +1,6 @@
-
+*:focus {
+    outline:none;
+}
 
 input:focus,
 button:focus {
@@ -12,165 +14,75 @@ body::-webkit-scrollbar {
     display:none; 
 }
 
-
-hr {
-    position: relative;
-    width: 100vw;
-    height: 0;
-    margin: 0;
-    left: -269px;
-    border: solid 2px #030222;
-}
-
-.container {
-    width: 100%;
-  }
-
 .maincontainer {
-    margin-left: 265px;
-    width: 747px;
-  }
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+}
 
 .titleBox {
-    display: block;
-    height: 297px;
+    padding-bottom: 2px;
+    border-bottom: 2px solid;
 }
 
-.contentBox {
-    display: block;
-    height: 677px;
+.formBox {
+    display : flex;
+    align-items: center;
+    padding: 25px 0px 25px 0px;
 }
 
-.title {
-    box-sizing: border-box;
-    padding-top: 60px;
+.formCategory {
+    width: 30%;
+    text-align: center;
+}
 
+.formContent {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+.formName {
+    color : #63636d;
+    font-size : 0.8rem;
+    margin: 15px 0px 3px 0px;
+}
+
+.formOutput {
+    display: block;
+    font-size : 1rem;
+    margin-bottom: 2px;
+    border : none;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
     font-family: 'arita-dotum4.0otfsemibold';
-    font-size: 35.5px;
-    font-weight: 600;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.19;
-    letter-spacing: normal;
-    text-align: left;
-    color: #030222;
-}
-
-.author {
-    padding-top: 34px;
-
-    font-family: 'arita-dotum4.0otfmedium';
-    font-size: 20px;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.21;
-    letter-spacing: normal;
-    text-align: left;
-    color: #63636d;
-}
-
-.teamtype {
-    padding-top: 24px;
-
-    font-family: 'arita-dotum4.0otfmedium';
-    font-size: 20px;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.21;
-    letter-spacing: normal;
-    text-align: left;
-    color: #030222;
-}
-
-.category {
-    padding-top: 24px;
-
-    font-family: 'arita-dotum4.0otfmedium';
-    font-size: 20px;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.21;
-    letter-spacing: normal;
-    text-align: left;
-    color: #030222;
-}
-
-.deadline {
-    padding-top: 46px;
-
-    font-family: 'arita-dotum4.0otfmedium';
-    font-size: 20px;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.21;
-    letter-spacing: normal;
-    text-align: left;
-    color: #030222;
-}
-
-.address {
-    padding-top: 24px;
-
-    font-family: 'arita-dotum4.0otfmedium';
-    font-size: 20px;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.21;
-    letter-spacing: normal;
-    text-align: left;
-    color: #030222;
-}
-
-.textarealabel {
-    padding-top: 24px;
-
-    font-family: 'arita-dotum4.0otfmedium';
-    font-size: 20px;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.21;
-    letter-spacing: normal;
-    text-align: left;
-    color: #030222;
+    width: 80%;
+    color : #030222;
 }
 
 .introductionarea {
-    box-sizing: border-box;
-    width: 747px;
-    height: 166px;
-    margin-top: 8px;
-    resize: none;
-
-    font-family: 'arita-dotum4.0otfmedium';
-    font-size: 18px;
-    font-weight: 500;
+    width : 80%;
+    height: 170px;
+    border : 0.3px solid #ccc;
+    font-family: 'arita-dotum4.0otfsemibold';
+    font-size: 1rem;
     font-stretch: normal;
     font-style: normal;
-    line-height: 1.21;
     letter-spacing: normal;
     text-align: left;
     color: #030222;
 }
 
 .preferentialerea {
-    box-sizing: border-box;
-    width: 747px;
+    width: 80%;
     height: 90px;
-    margin-top: 8px;
-    resize: none;
-
-    font-family: 'arita-dotum4.0otfmedium';
-    font-size: 18px;
-    font-weight: 500;
+    border : 0.3px solid #ccc;
+    font-family: 'arita-dotum4.0otfsemibold';
+    font-size: 1rem;
     font-stretch: normal;
     font-style: normal;
-    line-height: 1.21;
     letter-spacing: normal;
     text-align: left;
     color: #030222;
